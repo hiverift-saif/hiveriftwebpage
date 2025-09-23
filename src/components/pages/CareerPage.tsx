@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import { Badge } from "../ui/badge";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { HRContactForm } from "../HRContactForm";
+import { SEO } from "../SEO";  
 import { 
   MapPin, 
   Clock, 
@@ -37,13 +38,13 @@ export function CareerPage({ onNavigate }: CareerPageProps) {
     setShowHRForm(true);
   };
 
-  const handleLearnMore = (positionTitle: string) => {
-    // Convert position title to URL-friendly ID
-    const jobId = positionTitle.toLowerCase()
-      .replace(/[^a-z0-9\s]/g, '')
-      .replace(/\s+/g, '-');
-    onNavigate(`job-${jobId}`);
-  };
+ const handleLearnMore = (positionTitle: string) => {
+  const jobId = positionTitle.toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')
+    .replace(/\s+/g, '-');
+  onNavigate(`/job/${jobId}`);  // ✅ Correct route
+};
+
 
   const openPositions = [
     {
@@ -160,6 +161,15 @@ export function CareerPage({ onNavigate }: CareerPageProps) {
 
   return (
     <div className="py-20">
+
+       <SEO
+        title="Careers | Join Our Team at HiveRift Technologies"
+        description="Explore career opportunities at HiveRift Technologies. Join a dynamic team working on web development, AI, cloud, and digital innovation. Apply today!"
+        keywords="HiveRift careers, tech jobs in India, full stack developer jobs, UI/UX jobs, DevOps jobs, digital marketing jobs, business development careers"
+        image="https://hiverift.com/logo.svg"
+        url="https://hiverift.com/"
+      />
+
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16">

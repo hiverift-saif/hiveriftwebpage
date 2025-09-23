@@ -3,12 +3,15 @@ import { Button } from "../../ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../ui/card";
 import { ImageWithFallback } from "../../figma/ImageWithFallback";
 import { Heart, Shield, Activity, Zap, Lightbulb, Lock, Users, Handshake } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 
 interface HealthcarePageProps {
   onNavigate?: (page: string) => void;
 }
 
 export function HealthcarePage({ onNavigate }: HealthcarePageProps) {
+  const navigate = useNavigate();
   const whyChooseUs = [
     {
       icon: <Heart className="h-8 w-8 text-blue-400" />,
@@ -120,7 +123,7 @@ export function HealthcarePage({ onNavigate }: HealthcarePageProps) {
               <Button 
                 size="lg" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
-                onClick={() => onNavigate?.('services')}
+                 onClick={() => navigate("/services")}
               >
                 👉 Explore Our Services
               </Button>
@@ -296,7 +299,7 @@ export function HealthcarePage({ onNavigate }: HealthcarePageProps) {
             <Button 
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
-              onClick={() => onNavigate?.('contact')}
+              onClick={() => onNavigate?.('/contact')}
             >
               📩 Talk to Our Experts
             </Button>

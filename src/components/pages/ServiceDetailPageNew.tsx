@@ -26,6 +26,7 @@ import {
   Briefcase,
   HelpCircle
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface ServiceDetailPageProps {
   serviceId: string;
@@ -33,6 +34,7 @@ interface ServiceDetailPageProps {
 }
 
 export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPageProps) {
+  const navigate = useNavigate();
   const serviceData: { [key: string]: any } = {
     'web-development': {
       icon: <Code className="h-12 w-12 text-primary" />,
@@ -1539,7 +1541,7 @@ export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPagePr
             <Button 
               variant="secondary" 
               size="lg"
-              onClick={() => onNavigate('contact')}
+              onClick={() => navigate('/contact')}
             >
               Get Detailed Quote
             </Button>
@@ -1547,7 +1549,7 @@ export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPagePr
               variant="outline" 
               size="lg" 
               className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              onClick={() => onNavigate('booking')}
+              onClick={() => navigate('/BookingPage')}
             >
               Schedule Free Consultation
             </Button>

@@ -1,12 +1,13 @@
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { CheckCircle, Users, TrendingUp, BarChart3 } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 interface AboutSectionProps {
   onNavigate?: (page: string) => void;
 }
 
 export function AboutSection({ onNavigate }: AboutSectionProps) {
+   const navigate = useNavigate();
   const features = [
     {
       title: "Tailored Solutions for Every Business",
@@ -59,13 +60,13 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
               </p>
             </div>
             
-            <Button 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-black"
-              onClick={() => onNavigate?.('about')}
-            >
-              Read More
-            </Button>
+             <Button
+      variant="outline"
+      className="border-white text-white hover:bg-white hover:text-black"
+      onClick={() => navigate("/about")}
+    >
+      Read More
+    </Button>
           </div>
         </div>
 

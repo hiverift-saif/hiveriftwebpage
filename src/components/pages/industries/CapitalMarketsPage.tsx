@@ -3,12 +3,14 @@ import { Button } from "../../ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../ui/card";
 import { ImageWithFallback } from "../../figma/ImageWithFallback";
 import { TrendingUp, Shield, BarChart3, Zap, Lightbulb, Lock, Activity, Handshake } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface CapitalMarketsPageProps {
   onNavigate?: (page: string) => void;
 }
 
 export function CapitalMarketsPage({ onNavigate }: CapitalMarketsPageProps) {
+   const navigate = useNavigate();
   const whyChooseUs = [
     {
       icon: <TrendingUp className="h-8 w-8 text-blue-400" />,
@@ -120,7 +122,8 @@ export function CapitalMarketsPage({ onNavigate }: CapitalMarketsPageProps) {
               <Button 
                 size="lg" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
-                onClick={() => onNavigate?.('services')}
+        onClick={() => navigate("/services")}
+
               >
                 👉 Explore Our Solutions
               </Button>
@@ -296,7 +299,7 @@ export function CapitalMarketsPage({ onNavigate }: CapitalMarketsPageProps) {
             <Button 
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
-              onClick={() => onNavigate?.('contact')}
+              onClick={() => onNavigate?.('/contact')}
             >
               📩 Talk to Our Experts
             </Button>

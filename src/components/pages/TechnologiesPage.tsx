@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { SEO } from "../SEO";
 import { 
   Code2, 
   Database, 
@@ -153,6 +154,16 @@ export function TechnologiesPage() {
 
   return (
     <div className="py-20">
+
+       {/* ✅ SEO Meta Tags for Technologies Page */}
+      <SEO
+        title="Technologies | HiveRift IT Solutions"
+        description="Explore the cutting-edge technologies HiveRift uses, including frontend, backend, cloud, mobile, blockchain, and analytics tools for scalable and secure solutions."
+        keywords="HiveRift, technologies, web development, backend, frontend, mobile apps, cloud, DevOps, blockchain, database, AI"
+        image="https://hiverift.com/logo.svg"
+        url="https://hiverift.com/"
+      />
+
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16">

@@ -223,7 +223,7 @@ export function JobDetailPage({ jobId, onNavigate }: JobDetailPageProps) {
         <div className="mb-8">
           <Button 
             variant="ghost" 
-            onClick={() => onNavigate("career")}
+            onClick={() => onNavigate("/career")}
             className="text-primary hover:text-primary/80"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />

@@ -3,12 +3,16 @@ import { Button } from "../../ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../ui/card";
 import { ImageWithFallback } from "../../figma/ImageWithFallback";
 import { Shield, Code, Users, Headphones, Lightbulb, Lock, Zap, Handshake } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 
 interface BankingPageProps {
   onNavigate?: (page: string) => void;
 }
 
+
 export function BankingPage({ onNavigate }: BankingPageProps) {
+  const navigate = useNavigate();
   const whyChooseUs = [
     {
       icon: <Code className="h-8 w-8 text-blue-400" />,
@@ -120,7 +124,7 @@ export function BankingPage({ onNavigate }: BankingPageProps) {
               <Button 
                 size="lg" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
-                onClick={() => onNavigate?.('services')}
+                onClick={() => navigate("/services")}
               >
                 Explore Our Services
               </Button>

@@ -3,12 +3,14 @@ import { Button } from "../../ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../ui/card";
 import { ImageWithFallback } from "../../figma/ImageWithFallback";
 import { GraduationCap, Globe, BarChart3, Shield, Lightbulb, Lock, Zap, Handshake } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface EducationPageProps {
   onNavigate?: (page: string) => void;
 }
 
 export function EducationPage({ onNavigate }: EducationPageProps) {
+   const navigate = useNavigate();
   const whyChooseUs = [
     {
       icon: <Globe className="h-8 w-8 text-blue-400" />,
@@ -120,7 +122,8 @@ export function EducationPage({ onNavigate }: EducationPageProps) {
               <Button 
                 size="lg" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
-                onClick={() => onNavigate?.('services')}
+       onClick={() => navigate("/services")}
+
               >
                 👉 Explore Our Solutions
               </Button>

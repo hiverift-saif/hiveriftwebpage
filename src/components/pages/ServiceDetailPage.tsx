@@ -4,6 +4,7 @@ import { Badge } from "../ui/badge";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 import hiveriftBrandImage from 'figma:asset/9d07bcd3e4a0d1d77dbc2856356aea0482ff5b03.png';
+import { useNavigate } from "react-router-dom";
 import { 
   ArrowLeft,
   CheckCircle,
@@ -33,6 +34,7 @@ interface ServiceDetailPageProps {
 }
 
 export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPageProps) {
+    const navigate = useNavigate();
   const serviceData: { [key: string]: any } = {
     'web-development': {
       icon: <Code className="h-12 w-12 text-primary" />,
@@ -1363,7 +1365,7 @@ export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPagePr
       <div className="py-20 text-center">
         <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
         <p className="text-muted-foreground mb-8">The requested service could not be found.</p>
-        <Button onClick={() => onNavigate('services')}>
+        <Button onClick={() => navigate("/services")}>
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Services
         </Button>
@@ -1377,7 +1379,7 @@ export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPagePr
         {/* Back Button */}
         <Button 
           variant="outline" 
-          onClick={() => onNavigate('services')}
+         onClick={() => navigate("/services")}
           className="mb-8"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
@@ -1400,7 +1402,7 @@ export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPagePr
               
               <Button 
                 size="lg" 
-                onClick={() => onNavigate('contact')}
+                onClick={() => navigate("/contact")}
                 className="mr-4"
               >
                 Get Quote
@@ -1408,7 +1410,7 @@ export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPagePr
               <Button 
                 variant="outline" 
                 size="lg"
-                onClick={() => onNavigate('booking')}
+                onClick={() => navigate("/booking")}
               >
                 Schedule Consultation
               </Button>
@@ -1512,7 +1514,7 @@ export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPagePr
             <Button 
               variant="secondary" 
               size="lg"
-              onClick={() => onNavigate('contact')}
+              onClick={() => onNavigate('/contact')}
             >
               Get Detailed Quote
             </Button>
@@ -1520,7 +1522,7 @@ export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPagePr
               variant="outline" 
               size="lg" 
               className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              onClick={() => onNavigate('booking')}
+              onClick={() => onNavigate('/booking')}
             >
               Schedule Free Consultation
             </Button>

@@ -19,12 +19,16 @@ import {
   Mail
 } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 interface BookingPageProps {
   onNavigate: (page: string) => void;
 }
 
 export function BookingPage({ onNavigate }: BookingPageProps) {
+    const navigate = useNavigate();
+
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
   const [selectedTime, setSelectedTime] = useState("");
   const [meetingType, setMeetingType] = useState("");
@@ -135,7 +139,7 @@ export function BookingPage({ onNavigate }: BookingPageProps) {
                     Book Another Consultation
                   </Button>
                   <Button 
-                    onClick={() => onNavigate('home')}
+                    onClick={() => onNavigate('/')}
                     className="w-full"
                   >
                     Return to Home
@@ -156,7 +160,7 @@ export function BookingPage({ onNavigate }: BookingPageProps) {
         <div className="mb-8">
           <Button 
             variant="ghost" 
-            onClick={() => onNavigate('contact')}
+            onClick={() => navigate('/contact')}
             className="mb-4"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
