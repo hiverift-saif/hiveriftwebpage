@@ -3,7 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import { Badge } from "../ui/badge";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { HRContactForm } from "../HRContactForm";
+<<<<<<< HEAD
 import { SEO } from "../SEO";  
+=======
+>>>>>>> b28797d (addres changes)
 import { 
   MapPin, 
   Clock, 
@@ -38,6 +41,7 @@ export function CareerPage({ onNavigate }: CareerPageProps) {
     setShowHRForm(true);
   };
 
+<<<<<<< HEAD
  const handleLearnMore = (positionTitle: string) => {
   const jobId = positionTitle.toLowerCase()
     .replace(/[^a-z0-9\s]/g, '')
@@ -45,6 +49,15 @@ export function CareerPage({ onNavigate }: CareerPageProps) {
   onNavigate(`/job/${jobId}`);  // ✅ Correct route
 };
 
+=======
+  const handleLearnMore = (positionTitle: string) => {
+    // Convert position title to URL-friendly ID
+    const jobId = positionTitle.toLowerCase()
+      .replace(/[^a-z0-9\s]/g, '')
+      .replace(/\s+/g, '-');
+    onNavigate(`job-${jobId}`);
+  };
+>>>>>>> b28797d (addres changes)
 
   const openPositions = [
     {
@@ -161,6 +174,7 @@ export function CareerPage({ onNavigate }: CareerPageProps) {
 
   return (
     <div className="py-20">
+<<<<<<< HEAD
 
        <SEO
         title="Careers | Join Our Team at HiveRift Technologies"
@@ -170,6 +184,8 @@ export function CareerPage({ onNavigate }: CareerPageProps) {
         url="https://hiverift.com/"
       />
 
+=======
+>>>>>>> b28797d (addres changes)
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { motion } from "motion/react";
@@ -32,6 +33,43 @@ export function IndustriesSection() {
   return (
     <section className="py-20 bg-black relative">
       <div className="container mx-auto px-4 relative z-10">
+=======
+import { motion } from "motion/react";
+import { Badge } from "./ui/badge";
+import { ArrowRight } from "lucide-react";
+
+interface IndustriesSectionProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function IndustriesSection({ onNavigate }: IndustriesSectionProps) {
+  const industries = [
+    { name: "Banking", route: "industry-banking" },
+    { name: "Capital Markets", route: "industry-capital-markets" },
+    { name: "Communications, Media, and Information Services", route: "industry-communications" },
+    { name: "Consumer Packaged Goods and Distribution", route: "industry-consumer-goods" },
+    { name: "Education", route: "industry-education" },
+    { name: "Energy, Resources, and Utilities", route: "industry-energy" },
+    { name: "Healthcare", route: "industry-healthcare" },
+    { name: "High Tech", route: "industry-high-tech" },
+    { name: "Insurance", route: "industry-insurance" },
+    { name: "Life Sciences", route: "industry-life-sciences" },
+    { name: "Manufacturing", route: "industry-manufacturing" },
+    { name: "Public Services", route: "industry-public-services" },
+    { name: "Retail", route: "industry-retail" },
+    { name: "Travel and Logistics", route: "industry-travel" }
+  ];
+
+  const handleIndustryClick = (route: string) => {
+    if (onNavigate) {
+      onNavigate(route);
+    }
+  };
+
+  return (
+    <section className="py-20 bg-black">
+      <div className="container mx-auto px-4">
+>>>>>>> b28797d (addres changes)
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,15 +99,33 @@ export function IndustriesSection() {
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+=======
+                transition={{ 
+                  duration: 0.5, 
+                  delay: index * 0.1,
+                  ease: "easeOut"
+                }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.2 }
+                }}
+>>>>>>> b28797d (addres changes)
                 className="group cursor-pointer"
                 onClick={() => handleIndustryClick(industry.route)}
               >
                 <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 h-full transition-all duration-300 hover:bg-gray-800/70 hover:border-blue-400/30 hover:shadow-lg hover:shadow-blue-400/10">
                   <div className="flex items-center justify-between mb-3">
+<<<<<<< HEAD
                     <Badge
                       variant="outline"
+=======
+                    <Badge 
+                      variant="outline" 
+>>>>>>> b28797d (addres changes)
                       className="text-blue-400 border-blue-400/50 bg-blue-400/10 group-hover:bg-blue-400/20 transition-colors"
                     >
                       Industry
@@ -90,7 +146,15 @@ export function IndustriesSection() {
                       className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"
                       initial={{ width: "0%" }}
                       whileInView={{ width: "100%" }}
+<<<<<<< HEAD
                       transition={{ duration: 1.5, delay: index * 0.1, ease: "easeOut" }}
+=======
+                      transition={{ 
+                        duration: 1.5, 
+                        delay: index * 0.1,
+                        ease: "easeOut"
+                      }}
+>>>>>>> b28797d (addres changes)
                       viewport={{ once: true }}
                     />
                   </div>
@@ -99,6 +163,7 @@ export function IndustriesSection() {
             ))}
           </motion.div>
         </div>
+<<<<<<< HEAD
       </div>
 
       {/* Decorative elements */}
@@ -123,3 +188,46 @@ export function IndustriesSection() {
     </section>
   );
 }
+=======
+
+        {/* Decorative elements */}
+        <motion.div
+          className="absolute inset-0 overflow-hidden pointer-events-none"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-400/5 rounded-full blur-2xl"
+            animate={{
+              x: [0, 50, 0],
+              y: [0, -30, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-white/3 rounded-full blur-2xl"
+            animate={{
+              x: [0, -40, 0],
+              y: [0, 40, 0],
+              scale: [1, 0.9, 1],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+>>>>>>> b28797d (addres changes)

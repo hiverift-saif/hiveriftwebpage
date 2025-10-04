@@ -238,6 +238,18 @@ export function ContactSection() {
                   <p className="text-gray-300">New Rohtak Rd, Ratan Nagar, Karol Bagh</p>
                   <p className="text-gray-300">New Delhi, Delhi, 110005</p>
                 </div>
+<<<<<<< HEAD
+=======
+
+
+                 <div className="flex items-center gap-2 text-sm ">
+
+                <MapPin className="h-4 w-4 text-white "  />
+
+              
+                <span>265 Freure drive Cambridge <br /> ON N1S 0C1</span>
+              </div>
+>>>>>>> b28797d (addres changes)
               </div>
             </div>
 

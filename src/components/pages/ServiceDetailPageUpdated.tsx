@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -15,6 +16,13 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import {
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+import { Badge } from "../ui/badge";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
+import { 
+>>>>>>> b28797d (addres changes)
   ArrowLeft,
   CheckCircle,
   Users,
@@ -34,16 +42,22 @@ import {
   Monitor,
   Wrench,
   Briefcase,
+<<<<<<< HEAD
   HelpCircle,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { SEO } from "../SEO";
+=======
+  HelpCircle
+} from "lucide-react";
+>>>>>>> b28797d (addres changes)
 
 interface ServiceDetailPageProps {
   serviceId: string;
   onNavigate: (page: string) => void;
 }
 
+<<<<<<< HEAD
 export function ServiceDetailPage({
   serviceId,
   onNavigate,
@@ -62,16 +76,34 @@ export function ServiceDetailPage({
       keyFeatures: [
         "Responsive Design for All Devices",
         "SEO-Optimized Architecture",
+=======
+export function ServiceDetailPage({ serviceId, onNavigate }: ServiceDetailPageProps) {
+  const serviceData: { [key: string]: any } = {
+    'web-development': {
+      icon: <Code className="h-12 w-12 text-primary" />,
+      title: "Custom Website Design & Development",
+      subtitle: "Tailored web solutions that reflect your brand and drive business growth",
+      heroImage: "https://images.unsplash.com/photo-1593720213681-e9a8778330a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZyUyMHByb2dyYW1tZXJ8ZW58MXx8fHwxNzU4MTg4ODM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "From simple landing pages to complex web applications, our custom website development services are designed to create digital experiences that not only look stunning but also drive measurable business results. We combine cutting-edge technology with user-centered design to build websites that engage your audience and convert visitors into customers.",
+      keyFeatures: [
+        "Responsive Design for All Devices",
+        "SEO-Optimized Architecture", 
+>>>>>>> b28797d (addres changes)
         "Performance Optimization",
         "Content Management Integration",
         "E-commerce Functionality",
         "Third-party Integrations",
         "Security Best Practices",
+<<<<<<< HEAD
         "Analytics & Tracking Setup",
+=======
+        "Analytics & Tracking Setup"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Discovery & Planning",
+<<<<<<< HEAD
           description:
             "We analyze your business goals, target audience, and technical requirements to create a comprehensive project roadmap.",
         },
@@ -106,17 +138,44 @@ export function ServiceDetailPage({
         "Shopify",
         "AWS",
       ],
+=======
+          description: "We analyze your business goals, target audience, and technical requirements to create a comprehensive project roadmap."
+        },
+        {
+          step: "Design & Prototyping",
+          description: "Our designers create wireframes and interactive prototypes that visualize the user experience and interface design."
+        },
+        {
+          step: "Development & Integration",
+          description: "Our developers build your website using modern frameworks and integrate necessary third-party services."
+        },
+        {
+          step: "Testing & Launch",
+          description: "Comprehensive testing across devices and browsers ensures your website performs flawlessly before going live."
+        },
+        {
+          step: "Maintenance & Support",
+          description: "Ongoing updates, security patches, and performance optimization keep your website running smoothly."
+        }
+      ],
+      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "WordPress", "Shopify", "AWS"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Increased Online Visibility",
         "Better User Engagement",
         "Higher Conversion Rates",
         "Mobile-First Experience",
         "Search Engine Optimization",
+<<<<<<< HEAD
         "Scalable Architecture",
+=======
+        "Scalable Architecture"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What's included in your web development service?",
+<<<<<<< HEAD
           answer:
             "Our web development service includes custom design, responsive development, CMS integration, SEO optimization, performance optimization, security implementation, and post-launch support.",
         },
@@ -146,6 +205,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1730818875087-182c15e1e7a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXZlbG9wbWVudCUyMHNtYXJ0cGhvbmV8ZW58MXx8fHwxNzU4MTg3NjcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Transform your business ideas into powerful mobile applications that reach customers wherever they are. Our mobile app development services cover native iOS and Android apps, as well as cross-platform solutions that maximize your reach while optimizing development costs and time to market.",
+=======
+          answer: "Our web development service includes custom design, responsive development, CMS integration, SEO optimization, performance optimization, security implementation, and post-launch support."
+        },
+        {
+          question: "How long does it take to build a website?",
+          answer: "We provide detailed project timelines during the planning phase based on your specific requirements and scope."
+        },
+        {
+          question: "Do you provide ongoing maintenance?",
+          answer: "Yes, we offer comprehensive maintenance packages including security updates, performance monitoring, content updates, and technical support."
+        },
+        {
+          question: "Can you work with our existing brand guidelines?",
+          answer: "Absolutely! We seamlessly integrate your existing brand identity, colors, fonts, and style guidelines into the website design."
+        }
+      ]
+    },
+    'mobile-app-development': {
+      icon: <Smartphone className="h-12 w-12 text-primary" />,
+      title: "Mobile App Development",
+      subtitle: "Native and cross-platform applications that engage users and drive business objectives",
+      heroImage: "https://images.unsplash.com/photo-1730818875087-182c15e1e7a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXZlbG9wbWVudCUyMHNtYXJ0cGhvbmV8ZW58MXx8fHwxNzU4MTg3NjcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Transform your business ideas into powerful mobile applications that reach customers wherever they are. Our mobile app development services cover native iOS and Android apps, as well as cross-platform solutions that maximize your reach while optimizing development costs and time to market.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Native iOS & Android Development",
         "Cross-Platform Solutions",
@@ -154,11 +237,16 @@ export function ServiceDetailPage({
         "Push Notification Integration",
         "Offline Functionality",
         "Social Media Integration",
+<<<<<<< HEAD
         "Analytics & Performance Tracking",
+=======
+        "Analytics & Performance Tracking"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Concept & Strategy",
+<<<<<<< HEAD
           description:
             "We define your app's core functionality, target audience, and competitive positioning to create a winning mobile strategy.",
         },
@@ -193,17 +281,44 @@ export function ServiceDetailPage({
         "App Store Connect",
         "Google Play Console",
       ],
+=======
+          description: "We define your app's core functionality, target audience, and competitive positioning to create a winning mobile strategy."
+        },
+        {
+          step: "UI/UX Design",
+          description: "Our designers create intuitive interfaces that follow platform-specific guidelines while maintaining your brand identity."
+        },
+        {
+          step: "Development & Testing",
+          description: "Native or cross-platform development with rigorous testing across multiple devices and operating system versions."
+        },
+        {
+          step: "App Store Submission",
+          description: "We handle the complete app store submission process, including optimization for better discoverability."
+        },
+        {
+          step: "Post-Launch Support",
+          description: "Ongoing updates, bug fixes, and feature enhancements keep your app competitive and user-friendly."
+        }
+      ],
+      technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "AWS Mobile", "App Store Connect", "Google Play Console"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Direct Customer Engagement",
         "Increased Brand Loyalty",
         "New Revenue Streams",
         "Enhanced Customer Experience",
         "Real-time User Analytics",
+<<<<<<< HEAD
         "Competitive Advantage",
+=======
+        "Competitive Advantage"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "Should I choose native or cross-platform development?",
+<<<<<<< HEAD
           answer:
             "Native apps offer the best performance and platform-specific features, while cross-platform apps are cost-effective for reaching both iOS and Android users. We'll recommend the best approach based on your requirements.",
         },
@@ -232,6 +347,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1682971829405-42b40b5f0895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxNVlAlMjBkZXZlbG9wbWVudCUyMHByb3RvdHlwZSUyMHRlc3Rpbmd8ZW58MXx8fHwxNzU4MTg5MDIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Validate your business ideas efficiently with our MVP development services. We help you build minimum viable products that test core functionality, gather user feedback, and minimize time-to-market while maximizing learning opportunities before full-scale development.",
+=======
+          answer: "Native apps offer the best performance and platform-specific features, while cross-platform apps are cost-effective for reaching both iOS and Android users. We'll recommend the best approach based on your requirements."
+        },
+        {
+          question: "How much does mobile app development cost?",
+          answer: "Costs vary significantly based on features, complexity, and platform choice. We provide detailed quotes after understanding your specific requirements during our discovery phase."
+        },
+        {
+          question: "Do you help with app store submissions?",
+          answer: "Yes, we handle the complete app store submission process, including creating store listings, screenshots, and managing the approval process for both Apple App Store and Google Play Store."
+        },
+        {
+          question: "Can you integrate the app with our existing systems?",
+          answer: "Absolutely! We specialize in integrating mobile apps with existing CRM systems, databases, payment gateways, and other business tools through APIs."
+        }
+      ]
+    },
+    'mvp-development': {
+      icon: <Monitor className="h-12 w-12 text-primary" />,
+      title: "MVP Development & Testing",
+      subtitle: "Rapid prototyping and validation for your business ideas",
+      heroImage: "https://images.unsplash.com/photo-1682971829405-42b40b5f0895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxNVlAlMjBkZXZlbG9wbWVudCUyMHByb3RvdHlwZSUyMHRlc3Rpbmd8ZW58MXx8fHwxNzU4MTg5MDIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Validate your business ideas efficiently with our MVP development services. We help you build minimum viable products that test core functionality, gather user feedback, and minimize time-to-market while maximizing learning opportunities before full-scale development.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Rapid Prototyping",
         "User Feedback Integration",
@@ -240,11 +379,16 @@ export function ServiceDetailPage({
         "Core Feature Focus",
         "Analytics Implementation",
         "Scalable Architecture",
+<<<<<<< HEAD
         "Cost-Effective Solutions",
+=======
+        "Cost-Effective Solutions"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Idea Validation",
+<<<<<<< HEAD
           description:
             "We analyze your business concept, identify core features, and validate market demand through research and user interviews.",
         },
@@ -279,12 +423,35 @@ export function ServiceDetailPage({
         "Docker",
         "Analytics Tools",
       ],
+=======
+          description: "We analyze your business concept, identify core features, and validate market demand through research and user interviews."
+        },
+        {
+          step: "Feature Prioritization",
+          description: "Define the essential features that will deliver maximum value to users while keeping development time minimal."
+        },
+        {
+          step: "Rapid Development",
+          description: "Build the MVP using agile methodologies, focusing on core functionality and user experience essentials."
+        },
+        {
+          step: "Testing & Launch",
+          description: "Deploy the MVP to a controlled user group and gather valuable feedback and usage analytics."
+        },
+        {
+          step: "Iteration & Scaling",
+          description: "Based on user feedback and metrics, iterate on features and plan for full product development."
+        }
+      ],
+      technologies: ["React", "Node.js", "Firebase", "AWS", "MongoDB", "PostgreSQL", "Docker", "Analytics Tools"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Reduced Development Risk",
         "Faster Time-to-Market",
         "User-Validated Features",
         "Cost-Effective Testing",
         "Investor-Ready Prototype",
+<<<<<<< HEAD
         "Market Insights",
       ],
       faqs: [
@@ -321,6 +488,35 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1639182697243-9641e4b2f4b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibG9ja2NoYWluJTIwdGVjaG5vbG9neSUyMGRpZ2l0YWx8ZW58MXx8fHwxNzU4MDkyODE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Harness the power of blockchain technology to create secure, transparent, and decentralized solutions for your business. From smart contracts to full DApp development, we provide end-to-end blockchain services that can revolutionize how you handle transactions, data security, and business processes.",
+=======
+        "Market Insights"
+      ],
+      faqs: [
+        {
+          question: "What's the difference between MVP and full product development?",
+          answer: "MVP focuses on core features to test market viability quickly and cost-effectively, while full development includes comprehensive features, advanced integrations, and polished user experience."
+        },
+        {
+          question: "How do you determine which features to include in the MVP?",
+          answer: "We work with you to identify features that directly address your core value proposition and are essential for users to understand and experience your product's main benefits."
+        },
+        {
+          question: "Can the MVP be scaled into a full product later?",
+          answer: "Absolutely! We build MVPs with scalable architecture, so they can serve as the foundation for full product development based on validated learnings and user feedback."
+        },
+        {
+          question: "How do you measure MVP success?",
+          answer: "We implement analytics to track user engagement, feature usage, conversion rates, and other relevant KPIs that help validate your business assumptions."
+        }
+      ]
+    },
+    'blockchain-solutions': {
+      icon: <Shield className="h-12 w-12 text-primary" />,
+      title: "Blockchain Solutions",
+      subtitle: "Cutting-edge blockchain technology for secure and transparent business solutions",
+      heroImage: "https://images.unsplash.com/photo-1639182697243-9641e4b2f4b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibG9ja2NoYWluJTIwdGVjaG5vbG9neSUyMGRpZ2l0YWx8ZW58MXx8fHwxNzU4MDkyODE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Harness the power of blockchain technology to create secure, transparent, and decentralized solutions for your business. From smart contracts to full DApp development, we provide end-to-end blockchain services that can revolutionize how you handle transactions, data security, and business processes.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Smart Contract Development",
         "DApp (Decentralized App) Creation",
@@ -329,11 +525,16 @@ export function ServiceDetailPage({
         "NFT Marketplace Development",
         "Cryptocurrency Integration",
         "Supply Chain Solutions",
+<<<<<<< HEAD
         "Identity Verification Systems",
+=======
+        "Identity Verification Systems"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Blockchain Strategy",
+<<<<<<< HEAD
           description:
             "We assess your business needs and determine how blockchain technology can provide value and competitive advantages.",
         },
@@ -368,17 +569,44 @@ export function ServiceDetailPage({
         "IPFS",
         "MetaMask",
       ],
+=======
+          description: "We assess your business needs and determine how blockchain technology can provide value and competitive advantages."
+        },
+        {
+          step: "Architecture Design",
+          description: "Design the blockchain architecture, smart contracts, and integration points with your existing systems."
+        },
+        {
+          step: "Development & Testing",
+          description: "Build and rigorously test smart contracts and DApps on testnets before mainnet deployment."
+        },
+        {
+          step: "Security Audit",
+          description: "Comprehensive security audits ensure your blockchain solution is secure and follows best practices."
+        },
+        {
+          step: "Deployment & Monitoring",
+          description: "Deploy to mainnet and provide ongoing monitoring and maintenance for optimal performance."
+        }
+      ],
+      technologies: ["Ethereum", "Solidity", "Web3.js", "Hardhat", "Polygon", "Binance Smart Chain", "IPFS", "MetaMask"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Enhanced Security",
         "Transparent Transactions",
         "Reduced Intermediary Costs",
         "Immutable Record Keeping",
         "Global Accessibility",
+<<<<<<< HEAD
         "Automated Processes",
+=======
+        "Automated Processes"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What blockchain platforms do you work with?",
+<<<<<<< HEAD
           answer:
             "We work with major blockchain platforms including Ethereum, Polygon, Binance Smart Chain, and can recommend the best platform based on your specific requirements and budget.",
         },
@@ -409,6 +637,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBvbmxpbmUlMjBzaG9wcGluZ3xlbnwxfHx8fDE3NTgxNTUwMjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Build powerful e-commerce platforms that drive sales and enhance customer experience. Our comprehensive e-commerce solutions include custom online stores, marketplace development, payment processing, inventory management, and mobile commerce capabilities.",
+=======
+          answer: "We work with major blockchain platforms including Ethereum, Polygon, Binance Smart Chain, and can recommend the best platform based on your specific requirements and budget."
+        },
+        {
+          question: "How secure are blockchain solutions?",
+          answer: "Blockchain is inherently secure due to its decentralized nature, but smart contract code must be properly audited. We follow security best practices and conduct thorough audits before deployment."
+        },
+        {
+          question: "What are the costs associated with blockchain development?",
+          answer: "Costs include development, gas fees for deployment, and ongoing transaction costs. We provide transparent estimates and help optimize for cost-efficiency."
+        },
+        {
+          question: "Can blockchain integrate with our existing systems?",
+          answer: "Yes, we specialize in creating hybrid solutions that integrate blockchain technology with your existing databases, APIs, and business systems."
+        }
+      ]
+    },
+    'ecommerce-development': {
+      icon: <Globe className="h-12 w-12 text-primary" />,
+      title: "E-commerce Development",
+      subtitle: "Complete online store solutions with payment integration and inventory management",
+      heroImage: "https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBvbmxpbmUlMjBzaG9wcGluZ3xlbnwxfHx8fDE3NTgxNTUwMjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Build powerful e-commerce platforms that drive sales and enhance customer experience. Our comprehensive e-commerce solutions include custom online stores, marketplace development, payment processing, inventory management, and mobile commerce capabilities.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Custom E-commerce Platforms",
         "Payment Gateway Integration",
@@ -417,11 +669,16 @@ export function ServiceDetailPage({
         "Multi-vendor Marketplace",
         "Order Management & Tracking",
         "Customer Account Management",
+<<<<<<< HEAD
         "Analytics & Reporting",
+=======
+        "Analytics & Reporting"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Requirements Analysis",
+<<<<<<< HEAD
           description:
             "Understand your business model, target market, product catalog, and specific e-commerce requirements.",
         },
@@ -456,17 +713,44 @@ export function ServiceDetailPage({
         "PayPal",
         "AWS",
       ],
+=======
+          description: "Understand your business model, target market, product catalog, and specific e-commerce requirements."
+        },
+        {
+          step: "Platform Selection",
+          description: "Choose the optimal e-commerce platform or decide on custom development based on your needs and scalability requirements."
+        },
+        {
+          step: "Design & Development",
+          description: "Create user-friendly interfaces, implement secure payment systems, and develop robust backend functionality."
+        },
+        {
+          step: "Integration & Testing",
+          description: "Integrate with payment gateways, shipping providers, and third-party services while ensuring security and performance."
+        },
+        {
+          step: "Launch & Optimization",
+          description: "Deploy your e-commerce platform and continuously optimize based on user behavior and performance metrics."
+        }
+      ],
+      technologies: ["Shopify", "WooCommerce", "Magento", "React", "Node.js", "Stripe", "PayPal", "AWS"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "24/7 Sales Capability",
         "Global Market Reach",
         "Automated Order Processing",
         "Customer Data Insights",
         "Scalable Business Model",
+<<<<<<< HEAD
         "Reduced Operational Costs",
+=======
+        "Reduced Operational Costs"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "Which e-commerce platform is best for my business?",
+<<<<<<< HEAD
           answer:
             "The choice depends on your product type, business size, budget, and growth plans. We evaluate your needs and recommend the platform that offers the best balance of features, cost, and scalability.",
         },
@@ -496,6 +780,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1651282462432-2e33bec6b206?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBUEklMjBkZXZlbG9wbWVudCUyMGludGVncmF0aW9ufGVufDF8fHx8MTc1ODE4OTAzMXww&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Create seamless connections between your applications, services, and data sources with our custom API development services. We build robust, scalable APIs that enable efficient data exchange and system integration.",
+=======
+          answer: "The choice depends on your product type, business size, budget, and growth plans. We evaluate your needs and recommend the platform that offers the best balance of features, cost, and scalability."
+        },
+        {
+          question: "How secure are online payment transactions?",
+          answer: "We implement industry-standard security measures including SSL certificates, PCI compliance, secure payment gateways, and fraud protection to ensure safe transactions."
+        },
+        {
+          question: "Can you integrate with my existing inventory system?",
+          answer: "Yes, we can integrate your e-commerce platform with existing ERP, CRM, and inventory management systems through APIs to maintain synchronized data across platforms."
+        },
+        {
+          question: "Do you provide ongoing e-commerce support?",
+          answer: "We offer comprehensive support including security updates, performance optimization, feature enhancements, and technical support to keep your store running smoothly."
+        }
+      ]
+    },
+    'api-development': {
+      icon: <Database className="h-12 w-12 text-primary" />,
+      title: "API Development & Integration",
+      subtitle: "Connect your systems and streamline operations with custom APIs",
+      heroImage: "https://images.unsplash.com/photo-1651282462432-2e33bec6b206?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBUEklMjBkZXZlbG9wbWVudCUyMGludGVncmF0aW9ufGVufDF8fHx8MTc1ODE4OTAzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Create seamless connections between your applications, services, and data sources with our custom API development services. We build robust, scalable APIs that enable efficient data exchange and system integration.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "RESTful API Development",
         "GraphQL Implementation",
@@ -504,11 +812,16 @@ export function ServiceDetailPage({
         "Security & Authentication",
         "Rate Limiting & Monitoring",
         "Version Management",
+<<<<<<< HEAD
         "Performance Optimization",
+=======
+        "Performance Optimization"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Requirements Gathering",
+<<<<<<< HEAD
           description:
             "Analyze your integration needs, data flows, and system architecture to design optimal API solutions.",
         },
@@ -543,17 +856,44 @@ export function ServiceDetailPage({
         "AWS API Gateway",
         "Postman",
       ],
+=======
+          description: "Analyze your integration needs, data flows, and system architecture to design optimal API solutions."
+        },
+        {
+          step: "API Design",
+          description: "Create comprehensive API specifications, including endpoints, data models, and authentication mechanisms."
+        },
+        {
+          step: "Development & Testing",
+          description: "Build robust APIs with proper error handling, validation, and comprehensive testing for reliability."
+        },
+        {
+          step: "Documentation & Security",
+          description: "Create detailed documentation and implement security measures including authentication, authorization, and rate limiting."
+        },
+        {
+          step: "Integration & Monitoring",
+          description: "Deploy APIs and integrate with your systems while setting up monitoring and analytics for performance tracking."
+        }
+      ],
+      technologies: ["Node.js", "Python", "Express.js", "FastAPI", "MongoDB", "PostgreSQL", "AWS API Gateway", "Postman"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Seamless System Integration",
         "Improved Data Accessibility",
         "Enhanced Automation",
         "Scalable Architecture",
         "Third-party Connectivity",
+<<<<<<< HEAD
         "Streamlined Workflows",
+=======
+        "Streamlined Workflows"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What's the difference between REST and GraphQL APIs?",
+<<<<<<< HEAD
           answer:
             "REST APIs use multiple endpoints for different resources, while GraphQL uses a single endpoint with flexible queries. We recommend the best approach based on your specific use case and requirements.",
         },
@@ -583,6 +923,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVSSUyMFVYJTIwZGVzaWduJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODE4NDI4MXww&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Create digital experiences that users love and businesses benefit from. Our UI/UX design services focus on understanding your users' needs and behaviors to design interfaces that are not only visually appealing but also intuitive, accessible, and conversion-focused.",
+=======
+          answer: "REST APIs use multiple endpoints for different resources, while GraphQL uses a single endpoint with flexible queries. We recommend the best approach based on your specific use case and requirements."
+        },
+        {
+          question: "How do you ensure API security?",
+          answer: "We implement multiple security layers including authentication, authorization, rate limiting, input validation, HTTPS encryption, and regular security audits."
+        },
+        {
+          question: "Can you integrate with existing third-party services?",
+          answer: "Yes, we specialize in integrating with popular third-party services like payment gateways, CRM systems, marketing tools, and social media platforms through their APIs."
+        },
+        {
+          question: "Do you provide API documentation?",
+          answer: "Absolutely! We create comprehensive API documentation including endpoint descriptions, request/response examples, authentication details, and integration guides."
+        }
+      ]
+    },
+    'ui-ux-design': {
+      icon: <Palette className="h-12 w-12 text-primary" />,
+      title: "UI/UX Design & Prototyping",
+      subtitle: "User-centered design that creates exceptional digital experiences",
+      heroImage: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVSSUyMFVYJTIwZGVzaWduJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc1ODE4NDI4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Create digital experiences that users love and businesses benefit from. Our UI/UX design services focus on understanding your users' needs and behaviors to design interfaces that are not only visually appealing but also intuitive, accessible, and conversion-focused.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "User Research & Analysis",
         "Information Architecture",
@@ -591,11 +955,16 @@ export function ServiceDetailPage({
         "Interaction Design",
         "Usability Testing",
         "Accessibility Compliance",
+<<<<<<< HEAD
         "Design System Creation",
+=======
+        "Design System Creation"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Research & Discovery",
+<<<<<<< HEAD
           description:
             "We conduct user research, analyze competitors, and understand your business goals to inform design decisions.",
         },
@@ -630,17 +999,44 @@ export function ServiceDetailPage({
         "Miro",
         "Maze",
       ],
+=======
+          description: "We conduct user research, analyze competitors, and understand your business goals to inform design decisions."
+        },
+        {
+          step: "Information Architecture",
+          description: "Structure content and functionality to create logical, intuitive navigation and user flows."
+        },
+        {
+          step: "Wireframing & Prototyping",
+          description: "Create low-fidelity wireframes and interactive prototypes to test concepts before visual design."
+        },
+        {
+          step: "Visual Design",
+          description: "Apply your brand identity to create beautiful, consistent interfaces that engage and delight users."
+        },
+        {
+          step: "Testing & Iteration",
+          description: "Conduct usability testing and iterate on designs based on user feedback and performance data."
+        }
+      ],
+      technologies: ["Figma", "Adobe Creative Suite", "Sketch", "InVision", "Principle", "Framer", "Miro", "Maze"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Improved User Satisfaction",
         "Higher Conversion Rates",
         "Reduced Development Costs",
         "Better Brand Perception",
         "Increased User Retention",
+<<<<<<< HEAD
         "Competitive Advantage",
+=======
+        "Competitive Advantage"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What's the difference between UI and UX design?",
+<<<<<<< HEAD
           answer:
             "UX (User Experience) focuses on the overall user journey and functionality, while UI (User Interface) deals with the visual design and interactive elements. Both are essential for successful digital products.",
         },
@@ -670,6 +1066,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1749104953185-d171e149ccb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZCUyMGlkZW50aXR5JTIwZGVzaWduJTIwbG9nb3xlbnwxfHx8fDE3NTgxMDA5Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Build a strong, memorable brand identity that resonates with your target audience and differentiates you from competitors. Our comprehensive brand design services create cohesive visual identities that communicate your values and drive business growth.",
+=======
+          answer: "UX (User Experience) focuses on the overall user journey and functionality, while UI (User Interface) deals with the visual design and interactive elements. Both are essential for successful digital products."
+        },
+        {
+          question: "Do you conduct user research?",
+          answer: "Yes, user research is a crucial part of our design process. We conduct interviews, surveys, and usability testing to understand user needs and validate design decisions."
+        },
+        {
+          question: "Can you work with our development team?",
+          answer: "Absolutely! We collaborate closely with development teams, providing detailed design specifications, assets, and ongoing support throughout the implementation process."
+        },
+        {
+          question: "Do you create design systems?",
+          answer: "Yes, we create comprehensive design systems that include style guides, component libraries, and documentation to ensure consistency across all touchpoints."
+        }
+      ]
+    },
+    'brand-identity-design': {
+      icon: <Monitor className="h-12 w-12 text-primary" />,
+      title: "Brand Identity Design",
+      subtitle: "Complete brand identity packages that reflect your unique value proposition",
+      heroImage: "https://images.unsplash.com/photo-1749104953185-d171e149ccb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZCUyMGlkZW50aXR5JTIwZGVzaWduJTIwbG9nb3xlbnwxfHx8fDE3NTgxMDA5Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Build a strong, memorable brand identity that resonates with your target audience and differentiates you from competitors. Our comprehensive brand design services create cohesive visual identities that communicate your values and drive business growth.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Logo Design & Variations",
         "Brand Guidelines & Standards",
@@ -678,11 +1098,16 @@ export function ServiceDetailPage({
         "Brand Voice & Messaging",
         "Marketing Material Design",
         "Brand Asset Library",
+<<<<<<< HEAD
         "Implementation Guidelines",
+=======
+        "Implementation Guidelines"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Brand Discovery",
+<<<<<<< HEAD
           description:
             "Understand your business values, target audience, competitors, and brand positioning through comprehensive research.",
         },
@@ -715,17 +1140,44 @@ export function ServiceDetailPage({
         "Brand Book Templates",
         "Style Guides",
       ],
+=======
+          description: "Understand your business values, target audience, competitors, and brand positioning through comprehensive research."
+        },
+        {
+          step: "Concept Development",
+          description: "Create initial brand concepts, logos, and visual directions based on discovery insights and strategic positioning."
+        },
+        {
+          step: "Design Refinement",
+          description: "Refine selected concepts, develop color palettes, typography, and create comprehensive brand guidelines."
+        },
+        {
+          step: "Asset Creation",
+          description: "Design complete brand asset library including logos, icons, templates, and marketing materials."
+        },
+        {
+          step: "Brand Implementation",
+          description: "Apply brand identity across all touchpoints and provide guidelines for consistent brand implementation."
+        }
+      ],
+      technologies: ["Adobe Illustrator", "Adobe Photoshop", "Figma", "Adobe InDesign", "Brand Book Templates", "Style Guides"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Memorable Brand Recognition",
         "Professional Credibility",
         "Consistent Communication",
         "Competitive Differentiation",
         "Customer Trust Building",
+<<<<<<< HEAD
         "Marketing Effectiveness",
+=======
+        "Marketing Effectiveness"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What's included in a complete brand identity package?",
+<<<<<<< HEAD
           answer:
             "A complete package includes logo design, color palette, typography selection, brand guidelines, business card design, letterhead, and basic marketing templates.",
         },
@@ -755,6 +1207,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwYW5hbHl0aWNzfGVufDF8fHx8MTc1ODE1NjgxMHww&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Grow your business with comprehensive digital marketing strategies that drive results. Our data-driven approach combines multiple channels and tactics to increase your online visibility, engage your target audience, and convert prospects into loyal customers.",
+=======
+          answer: "A complete package includes logo design, color palette, typography selection, brand guidelines, business card design, letterhead, and basic marketing templates."
+        },
+        {
+          question: "How long does brand identity design take?",
+          answer: "We provide detailed project timelines during the discovery phase based on your specific requirements and scope of work."
+        },
+        {
+          question: "Can you redesign an existing brand?",
+          answer: "Yes, we specialize in brand evolution and redesign while maintaining brand equity and customer recognition where appropriate."
+        },
+        {
+          question: "Do you provide brand guidelines?",
+          answer: "Absolutely! We create comprehensive brand guidelines that cover logo usage, colors, typography, voice, and application examples to ensure consistent brand implementation."
+        }
+      ]
+    },
+    'digital-marketing': {
+      icon: <TrendingUp className="h-12 w-12 text-primary" />,
+      title: "Digital Marketing",
+      subtitle: "Data-driven marketing strategies to grow your online presence and reach your target audience",
+      heroImage: "https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwYW5hbHl0aWNzfGVufDF8fHx8MTc1ODE1NjgxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Grow your business with comprehensive digital marketing strategies that drive results. Our data-driven approach combines multiple channels and tactics to increase your online visibility, engage your target audience, and convert prospects into loyal customers.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "SEO & Content Marketing",
         "Social Media Management",
@@ -763,11 +1239,16 @@ export function ServiceDetailPage({
         "Conversion Rate Optimization",
         "Marketing Analytics",
         "Brand Management",
+<<<<<<< HEAD
         "Influencer Marketing",
+=======
+        "Influencer Marketing"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Market Analysis",
+<<<<<<< HEAD
           description:
             "Analyze your market, competitors, and target audience to identify opportunities and create strategic positioning.",
         },
@@ -802,17 +1283,44 @@ export function ServiceDetailPage({
         "Hootsuite",
         "Buffer",
       ],
+=======
+          description: "Analyze your market, competitors, and target audience to identify opportunities and create strategic positioning."
+        },
+        {
+          step: "Strategy Development",
+          description: "Develop a comprehensive digital marketing strategy aligned with your business goals and budget."
+        },
+        {
+          step: "Campaign Implementation",
+          description: "Execute multi-channel campaigns across search engines, social media, email, and other digital platforms."
+        },
+        {
+          step: "Performance Monitoring",
+          description: "Track key metrics and KPIs to measure campaign performance and identify optimization opportunities."
+        },
+        {
+          step: "Optimization & Growth",
+          description: "Continuously optimize campaigns based on data insights to improve ROI and drive sustainable growth."
+        }
+      ],
+      technologies: ["Google Analytics", "Google Ads", "Facebook Business", "Mailchimp", "HubSpot", "SEMrush", "Hootsuite", "Buffer"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Increased Website Traffic",
         "Higher Lead Generation",
         "Better Brand Awareness",
         "Improved ROI",
         "Enhanced Customer Engagement",
+<<<<<<< HEAD
         "Competitive Market Position",
+=======
+        "Competitive Market Position"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "Which digital marketing channels do you focus on?",
+<<<<<<< HEAD
           answer:
             "We work across all major digital channels including search engines, social media, email, content marketing, and paid advertising. We recommend the best mix based on your audience and goals.",
         },
@@ -842,6 +1350,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1676378280996-cff6b481d701?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbG91ZCUyMGNvbXB1dGluZyUyMGluZnJhc3RydWN0dXJlfGVufDF8fHx8MTc1ODExNTkzNHww&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Modernize your IT infrastructure with our comprehensive cloud migration services. We help businesses transition from on-premises systems to cloud platforms like AWS, Azure, and Google Cloud, ensuring improved scalability, security, and cost-efficiency while minimizing downtime and business disruption.",
+=======
+          answer: "We work across all major digital channels including search engines, social media, email, content marketing, and paid advertising. We recommend the best mix based on your audience and goals."
+        },
+        {
+          question: "How do you measure marketing success?",
+          answer: "We track relevant KPIs such as website traffic, lead generation, conversion rates, cost per acquisition, and ROI. We provide regular reports with actionable insights."
+        },
+        {
+          question: "Do you handle social media management?",
+          answer: "Yes, we provide comprehensive social media management including content creation, community management, paid advertising, and performance analytics across all major platforms."
+        },
+        {
+          question: "Can you work with our existing marketing tools?",
+          answer: "Absolutely! We integrate with popular marketing tools like CRM systems, email platforms, and analytics tools to create a seamless marketing ecosystem."
+        }
+      ]
+    },
+    'cloud-migration': {
+      icon: <Cloud className="h-12 w-12 text-primary" />,
+      title: "Cloud Migration Services",
+      subtitle: "Seamless migration to modern cloud platforms for scalability and efficiency",
+      heroImage: "https://images.unsplash.com/photo-1676378280996-cff6b481d701?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbG91ZCUyMGNvbXB1dGluZyUyMGluZnJhc3RydWN0dXJlfGVufDF8fHx8MTc1ODExNTkzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Modernize your IT infrastructure with our comprehensive cloud migration services. We help businesses transition from on-premises systems to cloud platforms like AWS, Azure, and Google Cloud, ensuring improved scalability, security, and cost-efficiency while minimizing downtime and business disruption.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Cloud Readiness Assessment",
         "Migration Strategy & Planning",
@@ -850,11 +1382,16 @@ export function ServiceDetailPage({
         "Infrastructure Optimization",
         "Security & Compliance",
         "Performance Monitoring",
+<<<<<<< HEAD
         "Cost Optimization",
+=======
+        "Cost Optimization"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Assessment & Planning",
+<<<<<<< HEAD
           description:
             "Evaluate your current infrastructure, applications, and data to create a comprehensive migration roadmap.",
         },
@@ -889,17 +1426,44 @@ export function ServiceDetailPage({
         "Ansible",
         "CloudFormation",
       ],
+=======
+          description: "Evaluate your current infrastructure, applications, and data to create a comprehensive migration roadmap."
+        },
+        {
+          step: "Migration Strategy",
+          description: "Design the optimal migration approach whether it's lift-and-shift, re-platforming, or complete modernization."
+        },
+        {
+          step: "Pilot Migration",
+          description: "Start with a pilot project to validate the migration approach and identify any potential issues."
+        },
+        {
+          step: "Full Migration",
+          description: "Execute the complete migration plan with minimal downtime and business impact."
+        },
+        {
+          step: "Optimization & Support",
+          description: "Optimize performance, costs, and security while providing ongoing support and monitoring."
+        }
+      ],
+      technologies: ["AWS", "Microsoft Azure", "Google Cloud Platform", "Docker", "Kubernetes", "Terraform", "Ansible", "CloudFormation"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Reduced IT Costs",
         "Improved Scalability",
         "Enhanced Security",
         "Better Disaster Recovery",
         "Increased Agility",
+<<<<<<< HEAD
         "Global Accessibility",
+=======
+        "Global Accessibility"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "Which cloud platform should we choose?",
+<<<<<<< HEAD
           answer:
             "The choice depends on your specific requirements, existing technology stack, compliance needs, and budget. We help evaluate and recommend the best platform for your needs.",
         },
@@ -929,6 +1493,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBVSSUyMGRlc2lnbiUyMGludGVyZmFjZXxlbnwxfHx8fDE3NTgxODk1MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Create stunning mobile app interfaces that follow platform-specific design guidelines while delivering exceptional user experiences. Our mobile UI design services focus on creating intuitive, engaging, and conversion-focused interfaces for iOS and Android applications.",
+=======
+          answer: "The choice depends on your specific requirements, existing technology stack, compliance needs, and budget. We help evaluate and recommend the best platform for your needs."
+        },
+        {
+          question: "How long does cloud migration take?",
+          answer: "We provide detailed project timelines during the planning phase based on the complexity and size of your infrastructure."
+        },
+        {
+          question: "What about data security during migration?",
+          answer: "We follow industry best practices for secure data migration, including encryption, secure transfer protocols, and comprehensive backup strategies to ensure data integrity."
+        },
+        {
+          question: "Do you provide post-migration support?",
+          answer: "Yes, we provide comprehensive post-migration support including monitoring, optimization, troubleshooting, and ongoing maintenance to ensure optimal performance."
+        }
+      ]
+    },
+    'mobile-app-ui-design': {
+      icon: <Smartphone className="h-12 w-12 text-primary" />,
+      title: "Mobile App UI Design",
+      subtitle: "Platform-specific mobile interfaces that enhance user experience and engagement",
+      heroImage: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBVSSUyMGRlc2lnbiUyMGludGVyZmFjZXxlbnwxfHx8fDE3NTgxODk1MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Create stunning mobile app interfaces that follow platform-specific design guidelines while delivering exceptional user experiences. Our mobile UI design services focus on creating intuitive, engaging, and conversion-focused interfaces for iOS and Android applications.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "iOS Human Interface Guidelines",
         "Android Material Design",
@@ -937,11 +1525,16 @@ export function ServiceDetailPage({
         "Adaptive Layouts",
         "Dark Mode Support",
         "Accessibility Compliance",
+<<<<<<< HEAD
         "App Store Asset Creation",
+=======
+        "App Store Asset Creation"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Platform Analysis",
+<<<<<<< HEAD
           description:
             "Analyze target platforms and user behaviors to determine optimal design approaches for iOS and Android.",
         },
@@ -976,17 +1569,44 @@ export function ServiceDetailPage({
         "iOS Design Guidelines",
         "Material Design",
       ],
+=======
+          description: "Analyze target platforms and user behaviors to determine optimal design approaches for iOS and Android."
+        },
+        {
+          step: "User Flow Mapping",
+          description: "Create detailed user flows and wireframes optimized for mobile interactions and navigation patterns."
+        },
+        {
+          step: "Visual Design",
+          description: "Design high-fidelity interfaces following platform guidelines while maintaining brand consistency."
+        },
+        {
+          step: "Interactive Prototyping",
+          description: "Create interactive prototypes to test gestures, animations, and micro-interactions."
+        },
+        {
+          step: "Asset Preparation",
+          description: "Prepare all design assets, specifications, and app store materials for development and submission."
+        }
+      ],
+      technologies: ["Figma", "Sketch", "Adobe XD", "Principle", "Framer", "Zeplin", "iOS Design Guidelines", "Material Design"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Platform-Optimized Experience",
         "Higher User Engagement",
         "Better App Store Performance",
         "Reduced Development Time",
         "Improved User Retention",
+<<<<<<< HEAD
         "Accessibility Compliance",
+=======
+        "Accessibility Compliance"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "Do you design for both iOS and Android?",
+<<<<<<< HEAD
           answer:
             "Yes, we create platform-specific designs that follow iOS Human Interface Guidelines and Android Material Design principles while maintaining brand consistency.",
         },
@@ -1016,6 +1636,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1671759378505-ede0506a165c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYW5kaW5nJTIwcGFnZSUyMGRlc2lnbiUyMGNvbnZlcnNpb258ZW58MXx8fHwxNzU4MTg5NTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Design compelling landing pages that convert visitors into customers. Our landing page design service focuses on creating high-performing, conversion-optimized pages that align with your marketing campaigns and business objectives.",
+=======
+          answer: "Yes, we create platform-specific designs that follow iOS Human Interface Guidelines and Android Material Design principles while maintaining brand consistency."
+        },
+        {
+          question: "What's included in mobile app UI design?",
+          answer: "Our service includes wireframes, high-fidelity designs, interactive prototypes, design specifications, app icons, and all necessary app store assets."
+        },
+        {
+          question: "How do you ensure designs work on different screen sizes?",
+          answer: "We create adaptive designs using responsive grids and flexible layouts that work seamlessly across various device sizes and orientations."
+        },
+        {
+          question: "Do you provide design handoff for developers?",
+          answer: "Yes, we provide detailed design specifications, asset files, and use tools like Figma or Zeplin to ensure smooth handoff to development teams."
+        }
+      ]
+    },
+    'landing-page-design': {
+      icon: <Globe className="h-12 w-12 text-primary" />,
+      title: "Landing Page Design",
+      subtitle: "High-converting landing pages optimized for lead generation and conversions",
+      heroImage: "https://images.unsplash.com/photo-1671759378505-ede0506a165c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYW5kaW5nJTIwcGFnZSUyMGRlc2lnbiUyMGNvbnZlcnNpb258ZW58MXx8fHwxNzU4MTg5NTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Design compelling landing pages that convert visitors into customers. Our landing page design service focuses on creating high-performing, conversion-optimized pages that align with your marketing campaigns and business objectives.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Conversion-Focused Design",
         "A/B Testing Variations",
@@ -1024,11 +1668,16 @@ export function ServiceDetailPage({
         "Clear Call-to-Actions",
         "Lead Capture Forms",
         "Social Proof Integration",
+<<<<<<< HEAD
         "Analytics Integration",
+=======
+        "Analytics Integration"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Goal Definition",
+<<<<<<< HEAD
           description:
             "Define conversion goals, target audience, and key performance indicators for the landing page.",
         },
@@ -1063,17 +1712,44 @@ export function ServiceDetailPage({
         "Optimizely",
         "WordPress",
       ],
+=======
+          description: "Define conversion goals, target audience, and key performance indicators for the landing page."
+        },
+        {
+          step: "Competitor Analysis",
+          description: "Analyze competitor landing pages and industry best practices to identify optimization opportunities."
+        },
+        {
+          step: "Design Creation",
+          description: "Create conversion-focused designs with clear value propositions and compelling calls-to-action."
+        },
+        {
+          step: "A/B Test Design",
+          description: "Develop multiple design variations for A/B testing to optimize conversion rates."
+        },
+        {
+          step: "Performance Optimization",
+          description: "Optimize designs for fast loading times and implement tracking for conversion analysis."
+        }
+      ],
+      technologies: ["Figma", "Adobe Creative Suite", "Unbounce", "Leadpages", "Google Analytics", "Hotjar", "Optimizely", "WordPress"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Higher Conversion Rates",
         "Improved ROI",
         "Better Lead Quality",
         "Reduced Bounce Rate",
         "Enhanced User Experience",
+<<<<<<< HEAD
         "Data-Driven Insights",
+=======
+        "Data-Driven Insights"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What makes a landing page convert well?",
+<<<<<<< HEAD
           answer:
             "High-converting landing pages have clear value propositions, compelling headlines, minimal distractions, strong calls-to-action, social proof, and fast loading times.",
         },
@@ -1103,6 +1779,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTRU8lMjBjb250ZW50JTIwbWFya2V0aW5nJTIwc3RyYXRlZ3l8ZW58MXx8fHwxNzU4MTg5NTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Boost your online visibility and attract qualified traffic with our comprehensive SEO and content marketing services. We create valuable, search-optimized content that engages your audience and drives organic growth for your business.",
+=======
+          answer: "High-converting landing pages have clear value propositions, compelling headlines, minimal distractions, strong calls-to-action, social proof, and fast loading times."
+        },
+        {
+          question: "Do you create multiple versions for testing?",
+          answer: "Yes, we create multiple design variations to A/B test different elements like headlines, CTAs, layouts, and colors to optimize conversion rates."
+        },
+        {
+          question: "How do you measure landing page success?",
+          answer: "We track metrics like conversion rate, bounce rate, time on page, scroll depth, and form completion rates to measure and optimize performance."
+        },
+        {
+          question: "Can you integrate with our marketing tools?",
+          answer: "Yes, we can integrate landing pages with popular marketing tools like CRM systems, email marketing platforms, analytics tools, and ad networks."
+        }
+      ]
+    },
+    'seo-content-marketing': {
+      icon: <Search className="h-12 w-12 text-primary" />,
+      title: "SEO & Content Marketing",
+      subtitle: "Strategic content creation and optimization to boost search rankings and engagement",
+      heroImage: "https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTRU8lMjBjb250ZW50JTIwbWFya2V0aW5nJTIwc3RyYXRlZ3l8ZW58MXx8fHwxNzU4MTg5NTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Boost your online visibility and attract qualified traffic with our comprehensive SEO and content marketing services. We create valuable, search-optimized content that engages your audience and drives organic growth for your business.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Keyword Research & Strategy",
         "On-Page SEO Optimization",
@@ -1111,11 +1811,16 @@ export function ServiceDetailPage({
         "Link Building Campaigns",
         "Local SEO Services",
         "Performance Tracking",
+<<<<<<< HEAD
         "Competitor Analysis",
+=======
+        "Competitor Analysis"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "SEO Audit & Analysis",
+<<<<<<< HEAD
           description:
             "Comprehensive analysis of your website's current SEO performance and identification of improvement opportunities.",
         },
@@ -1150,17 +1855,44 @@ export function ServiceDetailPage({
         "Google Keyword Planner",
         "Yoast SEO",
       ],
+=======
+          description: "Comprehensive analysis of your website's current SEO performance and identification of improvement opportunities."
+        },
+        {
+          step: "Keyword Strategy",
+          description: "Research and develop a targeted keyword strategy based on search volume, competition, and business goals."
+        },
+        {
+          step: "Content Planning",
+          description: "Create a content calendar and strategy that aligns with SEO goals and audience interests."
+        },
+        {
+          step: "Content Creation",
+          description: "Develop high-quality, SEO-optimized content including blogs, articles, guides, and landing pages."
+        },
+        {
+          step: "Optimization & Monitoring",
+          description: "Continuously optimize content and monitor rankings, traffic, and engagement metrics for ongoing improvement."
+        }
+      ],
+      technologies: ["Google Analytics", "Search Console", "SEMrush", "Ahrefs", "Moz", "Screaming Frog", "Google Keyword Planner", "Yoast SEO"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Increased Organic Traffic",
         "Higher Search Rankings",
         "Better Brand Authority",
         "Qualified Lead Generation",
         "Long-term ROI",
+<<<<<<< HEAD
         "Improved User Engagement",
+=======
+        "Improved User Engagement"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "How long does it take to see SEO results?",
+<<<<<<< HEAD
           answer:
             "SEO is a long-term strategy. You may start seeing improvements within a few months, with significant results typically visible after consistent optimization efforts.",
         },
@@ -1190,6 +1922,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1740818576358-7596eb883cf3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG9wZXJhdGlvbnMlMjBjb25zdWx0YW5jeXxlbnwxfHx8fDE3NTgxODk1MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Transform your business operations with our expert consultancy services. We help organizations streamline processes, implement efficient systems, and achieve operational excellence through strategic planning and digital transformation initiatives.",
+=======
+          answer: "SEO is a long-term strategy. You may start seeing improvements within a few months, with significant results typically visible after consistent optimization efforts."
+        },
+        {
+          question: "What types of content do you create?",
+          answer: "We create various content types including blog posts, articles, guides, infographics, videos, case studies, and landing pages, all optimized for search engines."
+        },
+        {
+          question: "Do you handle local SEO?",
+          answer: "Yes, we provide local SEO services including Google My Business optimization, local citations, review management, and location-specific content creation."
+        },
+        {
+          question: "How do you measure SEO success?",
+          answer: "We track metrics like organic traffic, keyword rankings, click-through rates, bounce rate, time on page, and conversions to measure and report on SEO performance."
+        }
+      ]
+    },
+    'operations-consultancy': {
+      icon: <Briefcase className="h-12 w-12 text-primary" />,
+      title: "Operations Consultancy Services",
+      subtitle: "Strategic guidance to optimize business operations and maximize efficiency",
+      heroImage: "https://images.unsplash.com/photo-1740818576358-7596eb883cf3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG9wZXJhdGlvbnMlMjBjb25zdWx0YW5jeXxlbnwxfHx8fDE3NTgxODk1MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Transform your business operations with our expert consultancy services. We help organizations streamline processes, implement efficient systems, and achieve operational excellence through strategic planning and digital transformation initiatives.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Process Optimization",
         "Digital Transformation",
@@ -1198,11 +1954,16 @@ export function ServiceDetailPage({
         "Change Management",
         "Technology Integration",
         "Cost Reduction Strategies",
+<<<<<<< HEAD
         "Quality Improvement",
+=======
+        "Quality Improvement"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Current State Assessment",
+<<<<<<< HEAD
           description:
             "Comprehensive analysis of existing operations, processes, and systems to identify inefficiencies and improvement opportunities.",
         },
@@ -1237,17 +1998,44 @@ export function ServiceDetailPage({
         "ERP Systems",
         "CRM Integration",
       ],
+=======
+          description: "Comprehensive analysis of existing operations, processes, and systems to identify inefficiencies and improvement opportunities."
+        },
+        {
+          step: "Gap Analysis",
+          description: "Compare current performance with industry best practices and desired future state to identify gaps."
+        },
+        {
+          step: "Strategy Development",
+          description: "Develop customized improvement strategies and implementation roadmaps aligned with business objectives."
+        },
+        {
+          step: "Implementation Support",
+          description: "Guide and support the implementation of recommended changes with change management best practices."
+        },
+        {
+          step: "Performance Monitoring",
+          description: "Establish KPIs and monitoring systems to track improvements and ensure sustainable operational excellence."
+        }
+      ],
+      technologies: ["Process Mapping Tools", "Microsoft Visio", "Lucidchart", "Six Sigma", "Lean Methodology", "Project Management Tools", "ERP Systems", "CRM Integration"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Improved Efficiency",
         "Cost Reduction",
         "Better Quality Control",
         "Enhanced Productivity",
         "Streamlined Processes",
+<<<<<<< HEAD
         "Competitive Advantage",
+=======
+        "Competitive Advantage"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What areas of operations do you cover?",
+<<<<<<< HEAD
           answer:
             "We cover all aspects of business operations including supply chain, production, quality control, customer service, finance, HR, and technology integration.",
         },
@@ -1277,6 +2065,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1560346785-8263f5e55a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXJ0dWFsJTIwYXNzaXN0YW50JTIwcmVtb3RlJTIwd29ya3xlbnwxfHx8fDE3NTgxMTE3NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Streamline your business operations with our professional virtual assistant services. Our skilled VAs handle administrative tasks, customer support, and specialized projects, allowing you to focus on strategic business growth and core activities.",
+=======
+          answer: "We cover all aspects of business operations including supply chain, production, quality control, customer service, finance, HR, and technology integration."
+        },
+        {
+          question: "How do you measure operational improvements?",
+          answer: "We establish baseline metrics and KPIs, then track improvements in areas like efficiency, cost reduction, quality scores, customer satisfaction, and employee productivity."
+        },
+        {
+          question: "Do you provide ongoing support?",
+          answer: "Yes, we offer ongoing support to ensure sustained improvements and help adapt to changing business needs and market conditions."
+        },
+        {
+          question: "Can you help with digital transformation?",
+          answer: "Absolutely! We specialize in digital transformation initiatives, helping businesses leverage technology to improve operations, automate processes, and enhance customer experiences."
+        }
+      ]
+    },
+    'virtual-assistant': {
+      icon: <HelpCircle className="h-12 w-12 text-primary" />,
+      title: "Virtual Assistant Services",
+      subtitle: "Professional administrative support to help you focus on core business activities",
+      heroImage: "https://images.unsplash.com/photo-1560346785-8263f5e55a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXJ0dWFsJTIwYXNzaXN0YW50JTIwcmVtb3RlJTIwd29ya3xlbnwxfHx8fDE3NTgxMTE3NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Streamline your business operations with our professional virtual assistant services. Our skilled VAs handle administrative tasks, customer support, and specialized projects, allowing you to focus on strategic business growth and core activities.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Administrative Support",
         "Customer Service",
@@ -1285,11 +2097,16 @@ export function ServiceDetailPage({
         "Email Management",
         "Calendar Scheduling",
         "Social Media Management",
+<<<<<<< HEAD
         "Research & Analysis",
+=======
+        "Research & Analysis"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Needs Assessment",
+<<<<<<< HEAD
           description:
             "Understand your specific requirements, workflow preferences, and business objectives to match you with the right virtual assistant.",
         },
@@ -1324,17 +2141,44 @@ export function ServiceDetailPage({
         "Social Media Tools",
         "Database Systems",
       ],
+=======
+          description: "Understand your specific requirements, workflow preferences, and business objectives to match you with the right virtual assistant."
+        },
+        {
+          step: "VA Selection & Onboarding",
+          description: "Select and onboard a qualified virtual assistant with relevant skills and experience for your industry and tasks."
+        },
+        {
+          step: "Task Setup & Training",
+          description: "Establish clear processes, provide necessary training, and set up communication channels for seamless collaboration."
+        },
+        {
+          step: "Daily Operations",
+          description: "Begin regular task execution with ongoing communication, progress updates, and quality assurance."
+        },
+        {
+          step: "Performance Review",
+          description: "Regular performance reviews and process optimization to ensure maximum efficiency and satisfaction."
+        }
+      ],
+      technologies: ["Microsoft Office Suite", "Google Workspace", "CRM Systems", "Project Management Tools", "Communication Platforms", "Time Tracking Software", "Social Media Tools", "Database Systems"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Cost Savings",
         "Increased Productivity",
         "Better Time Management",
         "24/7 Availability",
         "Specialized Skills Access",
+<<<<<<< HEAD
         "Scalable Support",
+=======
+        "Scalable Support"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What tasks can virtual assistants handle?",
+<<<<<<< HEAD
           answer:
             "Our VAs can handle administrative tasks, customer support, data entry, email management, calendar scheduling, research, social media management, and specialized projects based on their skills.",
         },
@@ -1364,6 +2208,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1566918621183-ff90d3e0553f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbWFpbCUyMG1hcmtldGluZyUyMGF1dG9tYXRpb24lMjBjYW1wYWlnbnxlbnwxfHx8fDE3NTgxODk1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Build stronger customer relationships and drive revenue with our comprehensive email marketing automation services. We create targeted, personalized email campaigns that nurture leads, engage customers, and maximize your marketing ROI.",
+=======
+          answer: "Our VAs can handle administrative tasks, customer support, data entry, email management, calendar scheduling, research, social media management, and specialized projects based on their skills."
+        },
+        {
+          question: "How do you ensure data security?",
+          answer: "We implement strict security protocols including NDAs, secure access controls, encrypted communication, and regular security training for all virtual assistants."
+        },
+        {
+          question: "What are the working hours?",
+          answer: "We offer flexible working arrangements and can provide support during your business hours or extend coverage for different time zones as needed."
+        },
+        {
+          question: "How do you handle quality control?",
+          answer: "We have robust quality assurance processes including regular check-ins, performance reviews, task audits, and continuous training to maintain high service standards."
+        }
+      ]
+    },
+    'email-marketing': {
+      icon: <Mail className="h-12 w-12 text-primary" />,
+      title: "Email Marketing Automation",
+      subtitle: "Automated email campaigns that nurture leads and drive customer engagement",
+      heroImage: "https://images.unsplash.com/photo-1566918621183-ff90d3e0553f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbWFpbCUyMG1hcmtldGluZyUyMGF1dG9tYXRpb24lMjBjYW1wYWlnbnxlbnwxfHx8fDE3NTgxODk1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Build stronger customer relationships and drive revenue with our comprehensive email marketing automation services. We create targeted, personalized email campaigns that nurture leads, engage customers, and maximize your marketing ROI.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Automated Email Sequences",
         "Customer Segmentation",
@@ -1372,11 +2240,16 @@ export function ServiceDetailPage({
         "Performance Analytics",
         "List Management",
         "Template Design",
+<<<<<<< HEAD
         "Deliverability Optimization",
+=======
+        "Deliverability Optimization"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Strategy Development",
+<<<<<<< HEAD
           description:
             "Define email marketing goals, target audience segments, and campaign strategies aligned with your business objectives.",
         },
@@ -1411,17 +2284,44 @@ export function ServiceDetailPage({
         "Klaviyo",
         "Google Analytics",
       ],
+=======
+          description: "Define email marketing goals, target audience segments, and campaign strategies aligned with your business objectives."
+        },
+        {
+          step: "List Building & Segmentation",
+          description: "Build and segment email lists based on demographics, behavior, and preferences for targeted messaging."
+        },
+        {
+          step: "Campaign Creation",
+          description: "Design and develop email templates, create compelling content, and set up automated workflows."
+        },
+        {
+          step: "Testing & Launch",
+          description: "A/B test different elements like subject lines, content, and CTAs before launching campaigns."
+        },
+        {
+          step: "Analysis & Optimization",
+          description: "Monitor performance metrics and continuously optimize campaigns for better engagement and conversions."
+        }
+      ],
+      technologies: ["Mailchimp", "HubSpot", "Constant Contact", "SendGrid", "Campaign Monitor", "ActiveCampaign", "Klaviyo", "Google Analytics"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Higher ROI",
         "Improved Customer Retention",
         "Better Lead Nurturing",
         "Increased Sales",
         "Enhanced Brand Loyalty",
+<<<<<<< HEAD
         "Automated Workflows",
+=======
+        "Automated Workflows"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "How do you ensure high email deliverability?",
+<<<<<<< HEAD
           answer:
             "We follow best practices including proper authentication, list hygiene, content optimization, and monitoring sender reputation to ensure emails reach inboxes.",
         },
@@ -1451,6 +2351,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1748609160056-7b95f30041f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMGRhdGElMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU4MTgwNTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Transform your business data into actionable insights with our comprehensive analytics and reporting services. We help you understand customer behavior, optimize operations, and make data-driven decisions that drive growth and profitability.",
+=======
+          answer: "We follow best practices including proper authentication, list hygiene, content optimization, and monitoring sender reputation to ensure emails reach inboxes."
+        },
+        {
+          question: "What types of email campaigns do you create?",
+          answer: "We create welcome series, promotional campaigns, newsletters, abandoned cart emails, re-engagement campaigns, and automated drip sequences based on your needs."
+        },
+        {
+          question: "How do you personalize email content?",
+          answer: "We use customer data, behavior tracking, and segmentation to personalize subject lines, content, product recommendations, and send times for each recipient."
+        },
+        {
+          question: "What metrics do you track?",
+          answer: "We track open rates, click-through rates, conversion rates, unsubscribe rates, bounce rates, and ROI to measure campaign performance and optimize results."
+        }
+      ]
+    },
+    'business-analytics': {
+      icon: <BarChart className="h-12 w-12 text-primary" />,
+      title: "Business Analytics & Reporting",
+      subtitle: "Data-driven insights and reporting to make informed business decisions",
+      heroImage: "https://images.unsplash.com/photo-1748609160056-7b95f30041f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMGRhdGElMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU4MTgwNTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Transform your business data into actionable insights with our comprehensive analytics and reporting services. We help you understand customer behavior, optimize operations, and make data-driven decisions that drive growth and profitability.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Custom Dashboard Creation",
         "Data Visualization",
@@ -1459,11 +2383,16 @@ export function ServiceDetailPage({
         "Performance Reporting",
         "Business Intelligence",
         "Data Integration",
+<<<<<<< HEAD
         "Automated Reporting",
+=======
+        "Automated Reporting"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Data Assessment",
+<<<<<<< HEAD
           description:
             "Evaluate your current data sources, quality, and accessibility to understand available information and identify gaps.",
         },
@@ -1499,17 +2428,44 @@ export function ServiceDetailPage({
         "Excel",
         "Looker",
       ],
+=======
+          description: "Evaluate your current data sources, quality, and accessibility to understand available information and identify gaps."
+        },
+        {
+          step: "Analytics Strategy",
+          description: "Define key metrics, KPIs, and reporting requirements based on your business goals and decision-making needs."
+        },
+        {
+          step: "Dashboard Development",
+          description: "Create custom dashboards and reports that provide clear, actionable insights into your business performance."
+        },
+        {
+          step: "Implementation & Training",
+          description: "Implement analytics solutions and train your team on how to interpret and use the data effectively."
+        },
+        {
+          step: "Ongoing Optimization",
+          description: "Continuously refine analytics and reporting based on changing business needs and new data sources."
+        }
+      ],
+      technologies: ["Google Analytics", "Power BI", "Tableau", "Google Data Studio", "SQL", "Python", "R", "Excel", "Looker"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Better Decision Making",
         "Improved ROI",
         "Operational Efficiency",
         "Customer Insights",
         "Performance Optimization",
+<<<<<<< HEAD
         "Competitive Advantage",
+=======
+        "Competitive Advantage"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What data sources can you integrate?",
+<<<<<<< HEAD
           answer:
             "We can integrate data from various sources including CRM systems, marketing platforms, sales tools, financial systems, social media, and web analytics.",
         },
@@ -1539,6 +2495,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1644165918597-f182dc5e43f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxEZXZPcHMlMjBhdXRvbWF0aW9uJTIwaW5mcmFzdHJ1Y3R1cmV8ZW58MXx8fHwxNzU4MTg5NTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Accelerate your software delivery and improve reliability with our DevOps and automation services. We implement CI/CD pipelines, infrastructure automation, and monitoring solutions that enhance development velocity while maintaining high quality and security standards.",
+=======
+          answer: "We can integrate data from various sources including CRM systems, marketing platforms, sales tools, financial systems, social media, and web analytics."
+        },
+        {
+          question: "How do you ensure data accuracy?",
+          answer: "We implement data validation rules, regular audits, and quality checks to ensure data accuracy and reliability in all reports and dashboards."
+        },
+        {
+          question: "Can you create real-time dashboards?",
+          answer: "Yes, we can create real-time dashboards that automatically update with the latest data, allowing you to monitor business performance continuously."
+        },
+        {
+          question: "Do you provide training on analytics tools?",
+          answer: "Absolutely! We provide comprehensive training on how to use dashboards, interpret data, and generate insights to maximize the value of your analytics investment."
+        }
+      ]
+    },
+    'devops-automation': {
+      icon: <Shield className="h-12 w-12 text-primary" />,
+      title: "DevOps & Automation",
+      subtitle: "Streamline development and deployment with modern DevOps practices and automation",
+      heroImage: "https://images.unsplash.com/photo-1644165918597-f182dc5e43f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxEZXZPcHMlMjBhdXRvbWF0aW9uJTIwaW5mcmFzdHJ1Y3R1cmV8ZW58MXx8fHwxNzU4MTg5NTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Accelerate your software delivery and improve reliability with our DevOps and automation services. We implement CI/CD pipelines, infrastructure automation, and monitoring solutions that enhance development velocity while maintaining high quality and security standards.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "CI/CD Pipeline Setup",
         "Infrastructure as Code",
@@ -1547,11 +2527,16 @@ export function ServiceDetailPage({
         "Monitoring & Logging",
         "Security Integration",
         "Performance Optimization",
+<<<<<<< HEAD
         "Release Management",
+=======
+        "Release Management"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Current State Analysis",
+<<<<<<< HEAD
           description:
             "Assess existing development processes, tools, and infrastructure to identify automation opportunities and pain points.",
         },
@@ -1587,17 +2572,44 @@ export function ServiceDetailPage({
         "Prometheus",
         "Grafana",
       ],
+=======
+          description: "Assess existing development processes, tools, and infrastructure to identify automation opportunities and pain points."
+        },
+        {
+          step: "DevOps Strategy",
+          description: "Design a comprehensive DevOps strategy including tool selection, process improvements, and automation roadmap."
+        },
+        {
+          step: "Pipeline Implementation",
+          description: "Set up CI/CD pipelines, automated testing, and deployment processes to streamline software delivery."
+        },
+        {
+          step: "Monitoring & Security",
+          description: "Implement comprehensive monitoring, logging, and security measures across the development and deployment lifecycle."
+        },
+        {
+          step: "Optimization & Training",
+          description: "Continuously optimize processes and provide team training on DevOps best practices and tools."
+        }
+      ],
+      technologies: ["Docker", "Kubernetes", "Jenkins", "GitLab", "AWS CodePipeline", "Terraform", "Ansible", "Prometheus", "Grafana"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Faster Deployment",
         "Improved Quality",
         "Reduced Manual Errors",
         "Better Collaboration",
         "Enhanced Security",
+<<<<<<< HEAD
         "Scalable Infrastructure",
+=======
+        "Scalable Infrastructure"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What is DevOps and how can it benefit our team?",
+<<<<<<< HEAD
           answer:
             "DevOps combines development and operations practices to automate and streamline software delivery, resulting in faster releases, better quality, and improved collaboration.",
         },
@@ -1627,6 +2639,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhYmFzZSUyMG1hbmFnZW1lbnQlMjBzZXJ2ZXJ8ZW58MXx8fHwxNzU4MTg5NTM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Optimize your data infrastructure with our comprehensive database management services. We design, implement, and maintain high-performance database solutions that ensure data integrity, security, and scalability for your business applications.",
+=======
+          answer: "DevOps combines development and operations practices to automate and streamline software delivery, resulting in faster releases, better quality, and improved collaboration."
+        },
+        {
+          question: "How long does it take to implement DevOps practices?",
+          answer: "Implementation varies based on complexity, but we provide detailed project timelines during our planning phase based on your specific requirements."
+        },
+        {
+          question: "Do you provide training for our development team?",
+          answer: "Yes, we provide comprehensive training on DevOps tools, practices, and methodologies to ensure your team can effectively maintain and improve the implemented solutions."
+        },
+        {
+          question: "Can you integrate with our existing tools?",
+          answer: "Absolutely! We work with your existing development tools and can integrate new DevOps solutions seamlessly with your current technology stack."
+        }
+      ]
+    },
+    'database-management': {
+      icon: <Database className="h-12 w-12 text-primary" />,
+      title: "Database Management",
+      subtitle: "Professional database design, optimization, and management for peak performance",
+      heroImage: "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhYmFzZSUyMG1hbmFnZW1lbnQlMjBzZXJ2ZXJ8ZW58MXx8fHwxNzU4MTg5NTM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Optimize your data infrastructure with our comprehensive database management services. We design, implement, and maintain high-performance database solutions that ensure data integrity, security, and scalability for your business applications.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "Database Design & Architecture",
         "Performance Tuning",
@@ -1635,11 +2671,16 @@ export function ServiceDetailPage({
         "Migration Services",
         "Monitoring & Maintenance",
         "Scalability Planning",
+<<<<<<< HEAD
         "Disaster Recovery",
+=======
+        "Disaster Recovery"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "Database Assessment",
+<<<<<<< HEAD
           description:
             "Analyze current database performance, structure, and identify optimization opportunities and potential issues.",
         },
@@ -1675,17 +2716,44 @@ export function ServiceDetailPage({
         "Azure Database",
         "Google Cloud SQL",
       ],
+=======
+          description: "Analyze current database performance, structure, and identify optimization opportunities and potential issues."
+        },
+        {
+          step: "Design & Planning",
+          description: "Design optimal database architecture considering performance, scalability, security, and business requirements."
+        },
+        {
+          step: "Implementation & Migration",
+          description: "Implement new database solutions or migrate existing data with minimal downtime and data integrity."
+        },
+        {
+          step: "Optimization & Security",
+          description: "Fine-tune performance, implement security measures, and establish backup and recovery procedures."
+        },
+        {
+          step: "Monitoring & Maintenance",
+          description: "Provide ongoing monitoring, maintenance, and support to ensure optimal database performance and availability."
+        }
+      ],
+      technologies: ["MySQL", "PostgreSQL", "MongoDB", "SQL Server", "Oracle", "Redis", "AWS RDS", "Azure Database", "Google Cloud SQL"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Improved Performance",
         "Enhanced Security",
         "Better Scalability",
         "Reduced Downtime",
         "Data Integrity",
+<<<<<<< HEAD
         "Cost Optimization",
+=======
+        "Cost Optimization"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "Which database technology should we use?",
+<<<<<<< HEAD
           answer:
             "The choice depends on your specific requirements including data structure, scalability needs, performance requirements, and budget. We help evaluate and recommend the best solution.",
         },
@@ -1715,6 +2783,30 @@ export function ServiceDetailPage({
         "https://images.unsplash.com/photo-1753964724380-2c5ae02512a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxJVCUyMG1haW50ZW5hbmNlJTIwc3VwcG9ydCUyMHRlY2huaWNhbHxlbnwxfHx8fDE3NTgxODk1NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       overview:
         "Ensure your digital infrastructure remains secure, updated, and performing optimally with our comprehensive maintenance and support services. We provide proactive monitoring, regular updates, and rapid issue resolution to minimize downtime and maximize performance.",
+=======
+          answer: "The choice depends on your specific requirements including data structure, scalability needs, performance requirements, and budget. We help evaluate and recommend the best solution."
+        },
+        {
+          question: "How do you ensure database security?",
+          answer: "We implement multiple security layers including encryption, access controls, audit logging, regular security updates, and compliance with industry standards."
+        },
+        {
+          question: "Can you help with database migration?",
+          answer: "Yes, we specialize in database migrations including schema conversion, data transfer, testing, and ensuring minimal downtime during the migration process."
+        },
+        {
+          question: "Do you provide 24/7 database monitoring?",
+          answer: "We offer various support levels including 24/7 monitoring and support to ensure your database systems remain available and perform optimally."
+        }
+      ]
+    },
+    'maintenance-support': {
+      icon: <Wrench className="h-12 w-12 text-primary" />,
+      title: "Ongoing Maintenance & Support",
+      subtitle: "Reliable technical support to keep your digital assets running smoothly and securely",
+      heroImage: "https://images.unsplash.com/photo-1753964724380-2c5ae02512a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxJVCUyMG1haW50ZW5hbmNlJTIwc3VwcG9ydCUyMHRlY2huaWNhbHxlbnwxfHx8fDE3NTgxODk1NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      overview: "Ensure your digital infrastructure remains secure, updated, and performing optimally with our comprehensive maintenance and support services. We provide proactive monitoring, regular updates, and rapid issue resolution to minimize downtime and maximize performance.",
+>>>>>>> b28797d (addres changes)
       keyFeatures: [
         "24/7 System Monitoring",
         "Security Updates & Patches",
@@ -1723,11 +2815,16 @@ export function ServiceDetailPage({
         "Backup Management",
         "Technical Support",
         "Software Updates",
+<<<<<<< HEAD
         "Preventive Maintenance",
+=======
+        "Preventive Maintenance"
+>>>>>>> b28797d (addres changes)
       ],
       process: [
         {
           step: "System Assessment",
+<<<<<<< HEAD
           description:
             "Comprehensive evaluation of your current systems, identifying maintenance needs and potential vulnerabilities.",
         },
@@ -1762,17 +2859,44 @@ export function ServiceDetailPage({
         "Update Management",
         "Cloud Platforms",
       ],
+=======
+          description: "Comprehensive evaluation of your current systems, identifying maintenance needs and potential vulnerabilities."
+        },
+        {
+          step: "Maintenance Planning",
+          description: "Develop a customized maintenance schedule and support plan based on your business requirements and criticality."
+        },
+        {
+          step: "Proactive Monitoring",
+          description: "Implement continuous monitoring systems to detect and prevent issues before they impact your business."
+        },
+        {
+          step: "Regular Maintenance",
+          description: "Execute scheduled maintenance activities including updates, optimizations, and preventive measures."
+        },
+        {
+          step: "Incident Response",
+          description: "Provide rapid response and resolution for any technical issues or emergencies that arise."
+        }
+      ],
+      technologies: ["Monitoring Tools", "Backup Solutions", "Security Scanners", "Performance Analyzers", "Remote Access Tools", "Ticketing Systems", "Update Management", "Cloud Platforms"],
+>>>>>>> b28797d (addres changes)
       benefits: [
         "Reduced Downtime",
         "Enhanced Security",
         "Improved Performance",
         "Cost Savings",
         "Peace of Mind",
+<<<<<<< HEAD
         "Extended System Life",
+=======
+        "Extended System Life"
+>>>>>>> b28797d (addres changes)
       ],
       faqs: [
         {
           question: "What types of systems do you support?",
+<<<<<<< HEAD
           answer:
             "We provide maintenance and support for websites, web applications, mobile apps, databases, cloud infrastructure, and various software systems across different platforms.",
         },
@@ -1793,6 +2917,24 @@ export function ServiceDetailPage({
         },
       ],
     },
+=======
+          answer: "We provide maintenance and support for websites, web applications, mobile apps, databases, cloud infrastructure, and various software systems across different platforms."
+        },
+        {
+          question: "How quickly do you respond to issues?",
+          answer: "Our response times vary by support level, with immediate response for critical issues and structured response times for standard requests, all outlined in our SLA."
+        },
+        {
+          question: "Do you provide emergency support?",
+          answer: "Yes, we offer emergency support services with rapid response times for critical issues that could impact your business operations."
+        },
+        {
+          question: "Can you work with systems built by other teams?",
+          answer: "Absolutely! We can take over maintenance and support for systems developed by other teams, starting with a comprehensive assessment and knowledge transfer."
+        }
+      ]
+    }
+>>>>>>> b28797d (addres changes)
   };
 
   const service = serviceData[serviceId];
@@ -1801,10 +2943,15 @@ export function ServiceDetailPage({
     return (
       <div className="py-20 text-center">
         <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
+<<<<<<< HEAD
         <p className="text-muted-foreground mb-8">
           The requested service could not be found.
         </p>
         <Button onClick={() => onNavigate("services")}>
+=======
+        <p className="text-muted-foreground mb-8">The requested service could not be found.</p>
+        <Button onClick={() => onNavigate('services')}>
+>>>>>>> b28797d (addres changes)
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Services
         </Button>
@@ -1814,6 +2961,7 @@ export function ServiceDetailPage({
 
   return (
     <div className="py-20">
+<<<<<<< HEAD
       {/* ✅ SEO Section */}
       <SEO
         title="Our Services | HiveRift"
@@ -1828,6 +2976,13 @@ export function ServiceDetailPage({
         <Button
           variant="outline"
           onClick={() => onNavigate("services")}
+=======
+      <div className="container mx-auto px-4">
+        {/* Back Button */}
+        <Button 
+          variant="outline" 
+          onClick={() => onNavigate('services')}
+>>>>>>> b28797d (addres changes)
           className="mb-8"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
@@ -1842,6 +2997,7 @@ export function ServiceDetailPage({
                 {service.icon}
                 <div>
                   <h1 className="text-4xl font-bold mb-2">{service.title}</h1>
+<<<<<<< HEAD
                   <p className="text-xl text-muted-foreground">
                     {service.subtitle}
                   </p>
@@ -1855,19 +3011,41 @@ export function ServiceDetailPage({
               <Button
                 size="lg"
                 onClick={() => onNavigate("contact")}
+=======
+                  <p className="text-xl text-muted-foreground">{service.subtitle}</p>
+                </div>
+              </div>
+              
+              <p className="text-lg text-muted-foreground mb-8">{service.overview}</p>
+              
+              <Button 
+                size="lg" 
+                onClick={() => onNavigate('contact')}
+>>>>>>> b28797d (addres changes)
                 className="mr-4"
               >
                 Get Quote
               </Button>
+<<<<<<< HEAD
               <Button
                 variant="outline"
                 size="lg"
                 onClick={() => onNavigate("booking")}
+=======
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => onNavigate('booking')}
+>>>>>>> b28797d (addres changes)
               >
                 Schedule Consultation
               </Button>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> b28797d (addres changes)
             <div>
               <ImageWithFallback
                 src={service.heroImage}
@@ -1880,9 +3058,13 @@ export function ServiceDetailPage({
 
         {/* Key Features */}
         <div className="mb-16">
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold mb-8 text-center">
             Key Features & Capabilities
           </h2>
+=======
+          <h2 className="text-3xl font-bold mb-8 text-center">Key Features & Capabilities</h2>
+>>>>>>> b28797d (addres changes)
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {service.keyFeatures.map((feature: string, index: number) => (
               <Card key={index} className="p-6 text-center">
@@ -1943,9 +3125,13 @@ export function ServiceDetailPage({
 
         {/* FAQ Section */}
         <div className="mb-16">
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold mb-8 text-center">
             Frequently Asked Questions
           </h2>
+=======
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+>>>>>>> b28797d (addres changes)
           <Accordion type="single" collapsible className="max-w-4xl mx-auto">
             {service.faqs.map((faq: any, index: number) => (
               <AccordionItem key={index} value={`item-${index}`}>
@@ -1964,6 +3150,7 @@ export function ServiceDetailPage({
         <Card className="p-12 text-center bg-primary text-primary-foreground">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-lg mb-8 opacity-90">
+<<<<<<< HEAD
             Let's discuss how our {service.title.toLowerCase()} services can
             help transform your business and achieve your goals.
           </p>
@@ -1980,6 +3167,23 @@ export function ServiceDetailPage({
               size="lg"
               className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               onClick={() => navigate("/BookingPage")}
+=======
+            Let's discuss how our {service.title.toLowerCase()} services can help transform your business and achieve your goals.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="secondary" 
+              size="lg"
+              onClick={() => onNavigate('contact')}
+            >
+              Get Detailed Quote
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              onClick={() => onNavigate('booking')}
+>>>>>>> b28797d (addres changes)
             >
               Schedule Free Consultation
             </Button>
@@ -1988,4 +3192,8 @@ export function ServiceDetailPage({
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b28797d (addres changes)

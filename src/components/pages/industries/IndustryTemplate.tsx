@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Button } from "../../ui/button";
+<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -13,6 +14,14 @@ import publicServicesImage from "figma:asset/07f93e297a8a1758e09a68b3c4ec8ec816e
 import highTechImage from "figma:asset/440fddbbc85d01041f25a9d1b636218c3157f28b.png";
 import healthcareImage from "figma:asset/6d0835866ce3eda5db67a9751197b5ad03027641.png";
 import { SEO } from "../../SEO";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../ui/card";
+import { ImageWithFallback } from "../../figma/ImageWithFallback";
+import { LucideIcon } from "lucide-react";
+import publicServicesImage from 'figma:asset/07f93e297a8a1758e09a68b3c4ec8ec816ee1498.png';
+import highTechImage from 'figma:asset/440fddbbc85d01041f25a9d1b636218c3157f28b.png';
+import healthcareImage from 'figma:asset/6d0835866ce3eda5db67a9751197b5ad03027641.png';
+>>>>>>> b28797d (addres changes)
 
 interface IndustryData {
   id: string;
@@ -62,6 +71,7 @@ interface IndustryTemplateProps {
 
 export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
   // Safety check to prevent errors if data is undefined
+<<<<<<< HEAD
   if (
     !data ||
     !data.hero ||
@@ -81,6 +91,16 @@ export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
           </p>
           <button
             onClick={() => onNavigate?.("home")}
+=======
+  if (!data || !data.hero || !data.whyChooseUs || !data.services || !data.advantages || !data.cta) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Industry Data Not Available</h1>
+          <p className="text-gray-300 mb-8">The requested industry page data is not available.</p>
+          <button 
+            onClick={() => onNavigate?.('home')}
+>>>>>>> b28797d (addres changes)
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
           >
             Return Home
@@ -93,6 +113,7 @@ export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
   // Industry-specific hero images
   const getIndustryHeroImage = (industryId: string) => {
     const industryImages: { [key: string]: string } = {
+<<<<<<< HEAD
       banking:
         "https://images.unsplash.com/photo-1533234944761-2f5337579079?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYW5raW5nJTIwdGVjaG5vbG9neSUyMG1vYmlsZSUyMGFwcHxlbnwxfHx8fDE3NTgwOTkwNTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       "capital-markets":
@@ -124,10 +145,30 @@ export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
       industryImages[industryId] ||
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral"
     );
+=======
+      'banking': 'https://images.unsplash.com/photo-1533234944761-2f5337579079?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYW5raW5nJTIwdGVjaG5vbG9neSUyMG1vYmlsZSUyMGFwcHxlbnwxfHx8fDE3NTgwOTkwNTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'capital-markets': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'communications': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'consumer-goods': 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'education': 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'energy': 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'healthcare': healthcareImage,
+      'high-tech': highTechImage,
+      'insurance': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'life-sciences': 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'manufacturing': 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'public-services': publicServicesImage,
+      'retail': 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      'travel': 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral'
+    };
+    
+    return industryImages[industryId] || 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080&utm_source=figma&utm_medium=referral';
+>>>>>>> b28797d (addres changes)
   };
 
   return (
     <div className="min-h-screen bg-black">
+<<<<<<< HEAD
       {/* ✅ SEO Section */}
       <SEO
         title="HiveRift | Web, Mobile, Blockchain, E-commerce & Cloud Solutions"
@@ -135,6 +176,8 @@ export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
         keywords="HiveRift, web development, mobile app development, blockchain solutions, e-commerce development, UI/UX design, digital marketing, SEO services, business analytics, cloud services, DevOps"
       />
 
+=======
+>>>>>>> b28797d (addres changes)
       {/* Hero Section */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
@@ -150,15 +193,26 @@ export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl">
                 {data.hero.subtext}
               </p>
+<<<<<<< HEAD
               <Button
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
                 onClick={() => onNavigate?.("services")}
+=======
+              <Button 
+                size="lg" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+                onClick={() => onNavigate?.('services')}
+>>>>>>> b28797d (addres changes)
               >
                 {data.hero.ctaText}
               </Button>
             </motion.div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> b28797d (addres changes)
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -205,9 +259,13 @@ export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
                       {item.icon}
                     </div>
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {item.title}
                   </h3>
+=======
+                  <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
+>>>>>>> b28797d (addres changes)
                   <p className="text-gray-300">{item.description}</p>
                 </div>
               </motion.div>
@@ -252,10 +310,14 @@ export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
                   <CardContent>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
+<<<<<<< HEAD
                         <li
                           key={idx}
                           className="text-gray-300 flex items-center"
                         >
+=======
+                        <li key={idx} className="text-gray-300 flex items-center">
+>>>>>>> b28797d (addres changes)
                           <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
                           {feature}
                         </li>
@@ -331,10 +393,17 @@ export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               {data.cta.subtext}
             </p>
+<<<<<<< HEAD
             <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
               onClick={() => onNavigate?.("/contact")}
+=======
+            <Button 
+              size="lg" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+              onClick={() => onNavigate?.('contact')}
+>>>>>>> b28797d (addres changes)
             >
               {data.cta.ctaText}
             </Button>
@@ -343,4 +412,8 @@ export function IndustryTemplate({ data, onNavigate }: IndustryTemplateProps) {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b28797d (addres changes)

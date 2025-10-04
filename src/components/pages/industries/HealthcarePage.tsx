@@ -3,15 +3,21 @@ import { Button } from "../../ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../ui/card";
 import { ImageWithFallback } from "../../figma/ImageWithFallback";
 import { Heart, Shield, Activity, Zap, Lightbulb, Lock, Users, Handshake } from "lucide-react";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 
+=======
+>>>>>>> b28797d (addres changes)
 
 interface HealthcarePageProps {
   onNavigate?: (page: string) => void;
 }
 
 export function HealthcarePage({ onNavigate }: HealthcarePageProps) {
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+>>>>>>> b28797d (addres changes)
   const whyChooseUs = [
     {
       icon: <Heart className="h-8 w-8 text-blue-400" />,
@@ -123,7 +129,11 @@ export function HealthcarePage({ onNavigate }: HealthcarePageProps) {
               <Button 
                 size="lg" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+<<<<<<< HEAD
                  onClick={() => navigate("/services")}
+=======
+                onClick={() => onNavigate?.('services')}
+>>>>>>> b28797d (addres changes)
               >
                 👉 Explore Our Services
               </Button>
@@ -299,7 +309,11 @@ export function HealthcarePage({ onNavigate }: HealthcarePageProps) {
             <Button 
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+<<<<<<< HEAD
               onClick={() => onNavigate?.('/contact')}
+=======
+              onClick={() => onNavigate?.('contact')}
+>>>>>>> b28797d (addres changes)
             >
               📩 Talk to Our Experts
             </Button>

@@ -16,7 +16,11 @@ export function IndustryPage({ industryId, onNavigate }: IndustryPageProps) {
           <h1 className="text-4xl font-bold text-white mb-4">Industry Not Found</h1>
           <p className="text-gray-300 mb-8">The requested industry page could not be found.</p>
           <button 
+<<<<<<< HEAD
             onClick={() => onNavigate?.('/')}
+=======
+            onClick={() => onNavigate?.('home')}
+>>>>>>> b28797d (addres changes)
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
           >
             Return Home

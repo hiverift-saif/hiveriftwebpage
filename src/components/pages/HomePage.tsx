@@ -6,7 +6,10 @@ import { ProcessSection } from "../ProcessSection";
 import { FAQSection } from "../FAQSection";
 import { ContactSection } from "../ContactSection";
 import { CareerSection } from "../CareerSection";
+<<<<<<< HEAD
 import { SEO } from "../SEO";
+=======
+>>>>>>> b28797d (addres changes)
 
 interface HomePageProps {
   onNavigate?: (page: string) => void;
@@ -15,6 +18,7 @@ interface HomePageProps {
 export function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div>
+<<<<<<< HEAD
       {/* ✅ SEO Meta Tags for Home Page */}
       <SEO
         title="Home | HiveRift Technologies"
@@ -24,6 +28,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
         url="https://hiverift.com/"
       />
 
+=======
+>>>>>>> b28797d (addres changes)
       <HeroSection onNavigate={onNavigate} />
       <AboutSection onNavigate={onNavigate} />
       <IndustriesSection onNavigate={onNavigate} />
@@ -34,4 +40,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
       {onNavigate && <CareerSection onNavigate={onNavigate} />}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b28797d (addres changes)

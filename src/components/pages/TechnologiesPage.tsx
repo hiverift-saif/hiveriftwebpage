@@ -1,7 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
+<<<<<<< HEAD
 import { SEO } from "../SEO";
+=======
+>>>>>>> b28797d (addres changes)
 import { 
   Code2, 
   Database, 
@@ -154,6 +157,7 @@ export function TechnologiesPage() {
 
   return (
     <div className="py-20">
+<<<<<<< HEAD
 
        {/* ✅ SEO Meta Tags for Technologies Page */}
       <SEO
@@ -164,6 +168,8 @@ export function TechnologiesPage() {
         url="https://hiverift.com/"
       />
 
+=======
+>>>>>>> b28797d (addres changes)
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16">

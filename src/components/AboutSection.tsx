@@ -1,13 +1,20 @@
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { CheckCircle, Users, TrendingUp, BarChart3 } from "lucide-react";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
+=======
+
+>>>>>>> b28797d (addres changes)
 interface AboutSectionProps {
   onNavigate?: (page: string) => void;
 }
 
 export function AboutSection({ onNavigate }: AboutSectionProps) {
+<<<<<<< HEAD
    const navigate = useNavigate();
+=======
+>>>>>>> b28797d (addres changes)
   const features = [
     {
       title: "Tailored Solutions for Every Business",
@@ -60,6 +67,7 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
               </p>
             </div>
             
+<<<<<<< HEAD
              <Button
       variant="outline"
       className="border-white text-white hover:bg-white hover:text-black"
@@ -67,6 +75,15 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
     >
       Read More
     </Button>
+=======
+            <Button 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-black"
+              onClick={() => onNavigate?.('about')}
+            >
+              Read More
+            </Button>
+>>>>>>> b28797d (addres changes)
           </div>
         </div>
 
